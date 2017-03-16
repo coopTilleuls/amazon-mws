@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionResultRequest
+ * MarketplaceWebService_Model_GetFeedSubmissionResultRequest.
  *
  * Properties:
  * <ul>
@@ -37,10 +38,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionResultRequest
+     * Construct new MarketplaceWebService_Model_GetFeedSubmissionResultRequest.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -55,11 +54,11 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
             'FeedSubmissionId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeedSubmissionResult' => array ('FieldValue' => null, 'FieldType' => 'string'),
+            'FeedSubmissionResult' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
@@ -78,29 +77,32 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the Marketplace property.
      *
      * @param string Marketplace
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Marketplace and returns this instance
+     * Sets the value of the Marketplace and returns this instance.
      *
      * @param string $value Marketplace
+     *
      * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
      */
     public function withMarketplace($value)
     {
         $this->setMarketplace($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Marketplace is set
+     * Checks if Marketplace is set.
      *
      * @return bool true if Marketplace  is set
      */
@@ -123,29 +125,32 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the Merchant property.
      *
      * @param string Merchant
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMerchant($value)
     {
         $this->fields['Merchant']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
+     * Sets the value of the Merchant and returns this instance.
      *
      * @param string $value Merchant
+     *
      * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
      */
     public function withMerchant($value)
     {
         $this->setMerchant($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Merchant is set
+     * Checks if Merchant is set.
      *
      * @return bool true if Merchant  is set
      */
@@ -168,29 +173,32 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the FeedSubmissionId property.
      *
      * @param string FeedSubmissionId
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setFeedSubmissionId($value)
     {
         $this->fields['FeedSubmissionId']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the FeedSubmissionId and returns this instance
+     * Sets the value of the FeedSubmissionId and returns this instance.
      *
      * @param string $value FeedSubmissionId
+     *
      * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
      */
     public function withFeedSubmissionId($value)
     {
         $this->setFeedSubmissionId($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if FeedSubmissionId is set
+     * Checks if FeedSubmissionId is set.
      *
      * @return bool true if FeedSubmissionId  is set
      */
@@ -213,29 +221,32 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the FeedSubmissionResult property.
      *
      * @param string FeedSubmissionResult
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setFeedSubmissionResult($value)
     {
         $this->fields['FeedSubmissionResult']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the FeedSubmissionResult and returns this instance
+     * Sets the value of the FeedSubmissionResult and returns this instance.
      *
      * @param string $value FeedSubmissionResult
+     *
      * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
      */
     public function withFeedSubmissionResult($value)
     {
         $this->setFeedSubmissionResult($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if FeedSubmissionResult is set
+     * Checks if FeedSubmissionResult is set.
      *
      * @return bool true if FeedSubmissionResult  is set
      */
@@ -243,6 +254,4 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
     {
         return !is_null($this->fields['FeedSubmissionResult']['FieldValue']);
     }
-
-
 }

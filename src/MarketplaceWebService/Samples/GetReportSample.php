@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -17,10 +20,9 @@
  */
 
 /**
- * Get Report  Sample
+ * Get Report  Sample.
  */
-
-include_once('.config.inc.php');
+include_once '.config.inc.php';
 
 /************************************************************************
  * Uncomment to configure the client instance. Configuration settings
@@ -51,7 +53,7 @@ include_once('.config.inc.php');
 // India
 //$serviceUrl = "https://mws.amazonservices.in";
 
-$config = array (
+$config = array(
     'ServiceURL' => $serviceUrl,
     'ProxyHost' => null,
     'ProxyPort' => -1,
@@ -113,48 +115,46 @@ invokeGetReport($service, $request);
  * streaming fashion.
  *
  * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
- * @param mixed $request MarketplaceWebService_Model_GetReport or array of parameters
+ * @param mixed                           $request MarketplaceWebService_Model_GetReport or array of parameters
  */
 function invokeGetReport(MarketplaceWebService_Interface $service, $request)
 {
     try {
         $response = $service->getReport($request);
 
-        echo ("Service Response\n");
-        echo ("=============================================================================\n");
+        echo "Service Response\n";
+        echo "=============================================================================\n";
 
-        echo("        GetReportResponse\n");
+        echo "        GetReportResponse\n";
         if ($response->isSetGetReportResult()) {
             $getReportResult = $response->getGetReportResult();
-            echo ("            GetReport");
+            echo '            GetReport';
 
             if ($getReportResult->isSetContentMd5()) {
-                echo ("                ContentMd5");
-                echo ("                " . $getReportResult->getContentMd5() . "\n");
+                echo '                ContentMd5';
+                echo '                '.$getReportResult->getContentMd5()."\n";
             }
         }
         if ($response->isSetResponseMetadata()) {
-            echo("            ResponseMetadata\n");
+            echo "            ResponseMetadata\n";
             $responseMetadata = $response->getResponseMetadata();
-            if ($responseMetadata->isSetRequestId())
-            {
-                echo("                RequestId\n");
-                echo("                    " . $responseMetadata->getRequestId() . "\n");
+            if ($responseMetadata->isSetRequestId()) {
+                echo "                RequestId\n";
+                echo '                    '.$responseMetadata->getRequestId()."\n";
             }
         }
 
-        echo ("        Report Contents\n");
-        echo (stream_get_contents($request->getReport()) . "\n");
+        echo "        Report Contents\n";
+        echo stream_get_contents($request->getReport())."\n";
 
-        echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
+        echo '            ResponseHeaderMetadata: '.$response->getResponseHeaderMetadata()."\n";
     } catch (MarketplaceWebService_Exception $ex) {
-        echo("Caught Exception: " . $ex->getMessage() . "\n");
-        echo("Response Status Code: " . $ex->getStatusCode() . "\n");
-        echo("Error Code: " . $ex->getErrorCode() . "\n");
-        echo("Error Type: " . $ex->getErrorType() . "\n");
-        echo("Request ID: " . $ex->getRequestId() . "\n");
-        echo("XML: " . $ex->getXML() . "\n");
-        echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
+        echo 'Caught Exception: '.$ex->getMessage()."\n";
+        echo 'Response Status Code: '.$ex->getStatusCode()."\n";
+        echo 'Error Code: '.$ex->getErrorCode()."\n";
+        echo 'Error Type: '.$ex->getErrorType()."\n";
+        echo 'Request ID: '.$ex->getRequestId()."\n";
+        echo 'XML: '.$ex->getXML()."\n";
+        echo 'ResponseHeaderMetadata: '.$ex->getResponseHeaderMetadata()."\n";
     }
 }
-                                                                                

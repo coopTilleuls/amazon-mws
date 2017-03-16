@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetReportListResult
+ * MarketplaceWebService_Model_GetReportListResult.
  *
  * Properties:
  * <ul>
@@ -37,10 +38,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetReportListResult extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListResult
+     * Construct new MarketplaceWebService_Model_GetReportListResult.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -55,7 +54,7 @@ class MarketplaceWebService_Model_GetReportListResult extends MarketplaceWebServ
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
             'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
             'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportInfo')),
@@ -77,29 +76,32 @@ class MarketplaceWebService_Model_GetReportListResult extends MarketplaceWebServ
      * Sets the value of the NextToken property.
      *
      * @param string NextToken
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setNextToken($value)
     {
         $this->fields['NextToken']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the NextToken and returns this instance
+     * Sets the value of the NextToken and returns this instance.
      *
      * @param string $value NextToken
+     *
      * @return MarketplaceWebService_Model_GetReportListResult instance
      */
     public function withNextToken($value)
     {
         $this->setNextToken($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if NextToken is set
+     * Checks if NextToken is set.
      *
      * @return bool true if NextToken  is set
      */
@@ -122,29 +124,32 @@ class MarketplaceWebService_Model_GetReportListResult extends MarketplaceWebServ
      * Sets the value of the HasNext property.
      *
      * @param bool HasNext
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setHasNext($value)
     {
         $this->fields['HasNext']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the HasNext and returns this instance
+     * Sets the value of the HasNext and returns this instance.
      *
      * @param bool $value HasNext
+     *
      * @return MarketplaceWebService_Model_GetReportListResult instance
      */
     public function withHasNext($value)
     {
         $this->setHasNext($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if HasNext is set
+     * Checks if HasNext is set.
      *
      * @return bool true if HasNext  is set
      */
@@ -167,47 +172,44 @@ class MarketplaceWebService_Model_GetReportListResult extends MarketplaceWebServ
      * Sets the value of the ReportInfo.
      *
      * @param mixed ReportInfo or an array of ReportInfo ReportInfo
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setReportInfoList($reportInfo)
     {
         if (!$this->_isNumericArray($reportInfo)) {
-            $reportInfo =  array ($reportInfo);
+            $reportInfo = array($reportInfo);
         }
         $this->fields['ReportInfo']['FieldValue'] = $reportInfo;
+
         return $this;
     }
-
 
     /**
      * Sets single or multiple values of ReportInfo list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withReportInfo($reportInfo1, $reportInfo2)</code>
+     * <code>withReportInfo($reportInfo1, $reportInfo2)</code>.
      *
-     * @param ReportInfo  $reportInfoArgs one or more ReportInfo
-     * @return MarketplaceWebService_Model_GetReportListResult  instance
+     * @param ReportInfo $reportInfoArgs one or more ReportInfo
+     *
+     * @return MarketplaceWebService_Model_GetReportListResult instance
      */
     public function withReportInfo($reportInfoArgs)
     {
         foreach (func_get_args() as $reportInfo) {
             $this->fields['ReportInfo']['FieldValue'][] = $reportInfo;
         }
+
         return $this;
     }
 
-
-
     /**
-     * Checks if ReportInfo list is non-empty
+     * Checks if ReportInfo list is non-empty.
      *
      * @return bool true if ReportInfo list is non-empty
      */
     public function isSetReportInfo()
     {
-        return count ($this->fields['ReportInfo']['FieldValue']) > 0;
+        return count($this->fields['ReportInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

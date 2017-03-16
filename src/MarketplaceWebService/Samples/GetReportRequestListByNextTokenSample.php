@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -17,10 +20,9 @@
  */
 
 /**
- * Get Report List  Sample
+ * Get Report List  Sample.
  */
-
-include_once('.config.inc.php');
+include_once '.config.inc.php';
 
 /************************************************************************
  * Uncomment to configure the client instance. Configuration settings
@@ -51,7 +53,7 @@ include_once('.config.inc.php');
 // India
 //$serviceUrl = "https://mws.amazonservices.in";
 
-$config = array (
+$config = array(
     'ServiceURL' => $serviceUrl,
     'ProxyHost' => null,
     'ProxyPort' => -1,
@@ -102,94 +104,83 @@ $service = new MarketplaceWebService_Client(
 // $request = new MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest();
 // $request->setMerchant(MERCHANT_ID);
 // $request->setNextToken($nextToken);
-// 
+//
 // invokeGetReportRequestListByNextToken($service, $request);
-
 
 /**
  * Get Report Request List By Next Token Action Sample
  * returns a list of reports; by default the most recent ten reports,
- * regardless of their acknowledgement status
+ * regardless of their acknowledgement status.
  *
  * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
- * @param mixed $request MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest or array of parameters
+ * @param mixed                           $request MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest or array of parameters
  */
 function invokeGetReportRequestListByNextToken(MarketplaceWebService_Interface $service, $request)
 {
     try {
         $response = $service->getReportRequestListByNextToken($request);
 
-        echo ("Service Response\n");
-        echo ("=============================================================================\n");
+        echo "Service Response\n";
+        echo "=============================================================================\n";
 
-        echo("        GetReportRequestListByNextTokenResponse\n");
+        echo "        GetReportRequestListByNextTokenResponse\n";
         if ($response->isSetGetReportRequestListByNextTokenResult()) {
-            echo("            GetReportRequestListByNextTokenResult\n");
+            echo "            GetReportRequestListByNextTokenResult\n";
             $getReportRequestListByNextTokenResult = $response->getGetReportRequestListByNextTokenResult();
-            if ($getReportRequestListByNextTokenResult->isSetNextToken())
-            {
-                echo("                NextToken\n");
-                echo("                    " . $getReportRequestListByNextTokenResult->getNextToken() . "\n");
+            if ($getReportRequestListByNextTokenResult->isSetNextToken()) {
+                echo "                NextToken\n";
+                echo '                    '.$getReportRequestListByNextTokenResult->getNextToken()."\n";
             }
-            if ($getReportRequestListByNextTokenResult->isSetHasNext())
-            {
-                echo("                HasNext\n");
-                echo("                    " . $getReportRequestListByNextTokenResult->getHasNext() . "\n");
+            if ($getReportRequestListByNextTokenResult->isSetHasNext()) {
+                echo "                HasNext\n";
+                echo '                    '.$getReportRequestListByNextTokenResult->getHasNext()."\n";
             }
             $reportRequestInfoList = $getReportRequestListByNextTokenResult->getReportRequestInfoList();
             foreach ($reportRequestInfoList as $reportRequestInfo) {
-                echo("                ReportRequestInfo\n");
-                if ($reportRequestInfo->isSetReportRequestId())
-                {
-                    echo("                    ReportRequestId\n");
-                    echo("                        " . $reportRequestInfo->getReportRequestId() . "\n");
+                echo "                ReportRequestInfo\n";
+                if ($reportRequestInfo->isSetReportRequestId()) {
+                    echo "                    ReportRequestId\n";
+                    echo '                        '.$reportRequestInfo->getReportRequestId()."\n";
                 }
-                if ($reportRequestInfo->isSetReportType())
-                {
-                    echo("                    ReportType\n");
-                    echo("                        " . $reportRequestInfo->getReportType() . "\n");
+                if ($reportRequestInfo->isSetReportType()) {
+                    echo "                    ReportType\n";
+                    echo '                        '.$reportRequestInfo->getReportType()."\n";
                 }
-                if ($reportRequestInfo->isSetStartDate())
-                {
-                    echo("                    StartDate\n");
-                    echo("                        " . $reportRequestInfo->getStartDate()->format(DATE_FORMAT) . "\n");
+                if ($reportRequestInfo->isSetStartDate()) {
+                    echo "                    StartDate\n";
+                    echo '                        '.$reportRequestInfo->getStartDate()->format(DATE_FORMAT)."\n";
                 }
-                if ($reportRequestInfo->isSetEndDate())
-                {
-                    echo("                    EndDate\n");
-                    echo("                        " . $reportRequestInfo->getEndDate()->format(DATE_FORMAT) . "\n");
+                if ($reportRequestInfo->isSetEndDate()) {
+                    echo "                    EndDate\n";
+                    echo '                        '.$reportRequestInfo->getEndDate()->format(DATE_FORMAT)."\n";
                 }
-                if ($reportRequestInfo->isSetSubmittedDate())
-                {
-                    echo("                    SubmittedDate\n");
-                    echo("                        " . $reportRequestInfo->getSubmittedDate()->format(DATE_FORMAT) . "\n");
+                if ($reportRequestInfo->isSetSubmittedDate()) {
+                    echo "                    SubmittedDate\n";
+                    echo '                        '.$reportRequestInfo->getSubmittedDate()->format(DATE_FORMAT)."\n";
                 }
-                if ($reportRequestInfo->isSetReportProcessingStatus())
-                {
-                    echo("                    ReportProcessingStatus\n");
-                    echo("                        " . $reportRequestInfo->getReportProcessingStatus() . "\n");
+                if ($reportRequestInfo->isSetReportProcessingStatus()) {
+                    echo "                    ReportProcessingStatus\n";
+                    echo '                        '.$reportRequestInfo->getReportProcessingStatus()."\n";
                 }
             }
         }
         if ($response->isSetResponseMetadata()) {
-            echo("            ResponseMetadata\n");
+            echo "            ResponseMetadata\n";
             $responseMetadata = $response->getResponseMetadata();
-            if ($responseMetadata->isSetRequestId())
-            {
-                echo("                RequestId\n");
-                echo("                    " . $responseMetadata->getRequestId() . "\n");
+            if ($responseMetadata->isSetRequestId()) {
+                echo "                RequestId\n";
+                echo '                    '.$responseMetadata->getRequestId()."\n";
             }
         }
 
-        echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
+        echo '            ResponseHeaderMetadata: '.$response->getResponseHeaderMetadata()."\n";
     } catch (MarketplaceWebService_Exception $ex) {
-        echo("Caught Exception: " . $ex->getMessage() . "\n");
-        echo("Response Status Code: " . $ex->getStatusCode() . "\n");
-        echo("Error Code: " . $ex->getErrorCode() . "\n");
-        echo("Error Type: " . $ex->getErrorType() . "\n");
-        echo("Request ID: " . $ex->getRequestId() . "\n");
-        echo("XML: " . $ex->getXML() . "\n");
-        echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
+        echo 'Caught Exception: '.$ex->getMessage()."\n";
+        echo 'Response Status Code: '.$ex->getStatusCode()."\n";
+        echo 'Error Code: '.$ex->getErrorCode()."\n";
+        echo 'Error Type: '.$ex->getErrorType()."\n";
+        echo 'Request ID: '.$ex->getRequestId()."\n";
+        echo 'XML: '.$ex->getXML()."\n";
+        echo 'ResponseHeaderMetadata: '.$ex->getResponseHeaderMetadata()."\n";
     }
 }
-?>

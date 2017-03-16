@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,11 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-require_once ('MarketplaceWebService/Model/ContentType.php');
-
+require_once 'MarketplaceWebService/Model.php';
+require_once 'MarketplaceWebService/Model/ContentType.php';
 
 /**
- * MarketplaceWebService_Model_SubmitFeedRequest
+ * MarketplaceWebService_Model_SubmitFeedRequest.
  *
  * Properties:
  * <ul>
@@ -40,10 +42,8 @@ require_once ('MarketplaceWebService/Model/ContentType.php');
  */
 class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedRequest
+     * Construct new MarketplaceWebService_Model_SubmitFeedRequest.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -59,7 +59,6 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      *
      * </ul>
      */
-
     private static $DEFAULT_CONTENT_TYPE;
 
     public function __construct($data = null)
@@ -67,19 +66,19 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
         self::$DEFAULT_CONTENT_TYPE = new MarketplaceWebService_Model_ContentType(
             array('ContentType' => 'application/octet-stream'));
 
-        // Here we're setting the content-type field directly to the object, but beware the actual 
+        // Here we're setting the content-type field directly to the object, but beware the actual
         // method of construction from associative arrays from the client interface would do something like:
         // $parameters = array ('ContentType' => array('ContentType' => 'application/octet-stream'));
 
-        $this->fields = array (
+        $this->fields = array(
             'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
-            'FeedContent' => array ('FieldValue' => null, 'FieldType' => 'string'),
+            'FeedContent' => array('FieldValue' => null, 'FieldType' => 'string'),
             'FeedType' => array('FieldValue' => null, 'FieldType' => 'string'),
             'PurgeAndReplace' => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'ContentMd5' => array ('FieldValue' => null, 'FieldType' => 'string'),
-            'ContentType' => array ('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'MarketplaceWebService_Model_ContentType')
+            'ContentMd5' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ContentType' => array('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'MarketplaceWebService_Model_ContentType'),
         );
 
         parent::__construct($data);
@@ -87,35 +86,36 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
         if (!is_null($this->fields['ContentType']['FieldValue'])) {
             $this->verifySupportedContentType($this->fields['ContentType']['FieldValue']);
         }
-
     }
 
-    private function verifySupportedContentType($supplied) {
+    private function verifySupportedContentType($supplied)
+    {
         if (!($supplied == self::$DEFAULT_CONTENT_TYPE)) {
-            throw new MarketplaceWebService_Exception(array('Message' =>
-                "Unsupported ContentType " .  $supplied->getContentType() .
-                " ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()));
+            throw new MarketplaceWebService_Exception(array('Message' => 'Unsupported ContentType '.$supplied->getContentType().
+                ' ContentType must be '.self::$DEFAULT_CONTENT_TYPE->getContentType(), ));
         }
     }
 
     /**
-     * Gets the value of the content type
+     * Gets the value of the content type.
      *
      * @return ContentType instance
      */
-
     public function getContentType()
     {
         return $this->fields['ContentType']['FieldValue'];
     }
 
-    public function setContentType($value) {
+    public function setContentType($value)
+    {
         $this->verifySupportedContentType($value);
         $this->fields['ContentType']['FieldValue'] = $value;
+
         return $this;
     }
 
-    public function isSetContentType() {
+    public function isSetContentType()
+    {
         return !is_null($this->fields['ContentType']['FieldValue']);
     }
 
@@ -133,29 +133,32 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      * Sets the value of the Marketplace property.
      *
      * @param string Marketplace
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Marketplace and returns this instance
+     * Sets the value of the Marketplace and returns this instance.
      *
      * @param string $value Marketplace
+     *
      * @return MarketplaceWebService_Model_SubmitFeedRequest instance
      */
     public function withMarketplace($value)
     {
         $this->setMarketplace($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Marketplace is set
+     * Checks if Marketplace is set.
      *
      * @return bool true if Marketplace  is set
      */
@@ -178,29 +181,32 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      * Sets the value of the Merchant property.
      *
      * @param string Merchant
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMerchant($value)
     {
         $this->fields['Merchant']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
+     * Sets the value of the Merchant and returns this instance.
      *
      * @param string $value Merchant
+     *
      * @return MarketplaceWebService_Model_SubmitFeedRequest instance
      */
     public function withMerchant($value)
     {
         $this->setMerchant($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Merchant is set
+     * Checks if Merchant is set.
      *
      * @return bool true if Merchant  is set
      */
@@ -223,38 +229,38 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      * Sets the value of the MarketplaceIdList.
      *
      * @param IdList MarketplaceIdList
-     * @return void
      */
     public function setMarketplaceIdList($value)
     {
         $marketplaceIdList = new MarketplaceWebService_Model_IdList();
         $marketplaceIdList->setId($value['Id']);
         $this->fields['MarketplaceIdList']['FieldValue'] = $marketplaceIdList;
+
         return;
     }
 
     /**
-     * Sets the value of the MarketplaceIdList  and returns this instance
+     * Sets the value of the MarketplaceIdList  and returns this instance.
      *
      * @param IdList $value MarketplaceIdList
+     *
      * @return MarketplaceWebService_Model_SubmitFeedRequest instance
      */
     public function withMarketplaceIdList($value)
     {
         $this->setMarketplaceIdList($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if MarketplaceIdList  is set
+     * Checks if MarketplaceIdList  is set.
      *
      * @return bool true if MarketplaceIdList property is set
      */
     public function isSetMarketplaceIdList()
     {
         return !is_null($this->fields['MarketplaceIdList']['FieldValue']);
-
     }
 
     /**
@@ -271,29 +277,32 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      * Sets the value of the FeedContent property.
      *
      * @param string FeedContent
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setFeedContent($value)
     {
         $this->fields['FeedContent']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the FeedContent and returns this instance
+     * Sets the value of the FeedContent and returns this instance.
      *
      * @param string $value FeedContent
+     *
      * @return MarketplaceWebService_Model_SubmitFeedRequest instance
      */
     public function withFeedContent($value)
     {
         $this->setFeedContent($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if FeedContent is set
+     * Checks if FeedContent is set.
      *
      * @return bool true if FeedContent  is set
      */
@@ -316,29 +325,32 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      * Sets the value of the FeedType property.
      *
      * @param string FeedType
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setFeedType($value)
     {
         $this->fields['FeedType']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the FeedType and returns this instance
+     * Sets the value of the FeedType and returns this instance.
      *
      * @param string $value FeedType
+     *
      * @return MarketplaceWebService_Model_SubmitFeedRequest instance
      */
     public function withFeedType($value)
     {
         $this->setFeedType($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if FeedType is set
+     * Checks if FeedType is set.
      *
      * @return bool true if FeedType  is set
      */
@@ -361,29 +373,32 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      * Sets the value of the PurgeAndReplace property.
      *
      * @param bool PurgeAndReplace
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setPurgeAndReplace($value)
     {
         $this->fields['PurgeAndReplace']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the PurgeAndReplace and returns this instance
+     * Sets the value of the PurgeAndReplace and returns this instance.
      *
      * @param bool $value PurgeAndReplace
+     *
      * @return MarketplaceWebService_Model_SubmitFeedRequest instance
      */
     public function withPurgeAndReplace($value)
     {
         $this->setPurgeAndReplace($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if PurgeAndReplace is set
+     * Checks if PurgeAndReplace is set.
      *
      * @return bool true if PurgeAndReplace  is set
      */
@@ -406,29 +421,32 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
      * Sets the value of the ContentMd5 property.
      *
      * @param bool ContentMd5
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setContentMd5($value)
     {
         $this->fields['ContentMd5']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the ContentMd5 and returns this instance
+     * Sets the value of the ContentMd5 and returns this instance.
      *
      * @param bool $value ContentMd5
+     *
      * @return MarketplaceWebService_Model_SubmitFeedRequest instance
      */
     public function withContentMd5($value)
     {
         $this->setContentMd5($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ContentMd5 is set
+     * Checks if ContentMd5 is set.
      *
      * @return bool true if ContentMd5  is set
      */
@@ -436,5 +454,4 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     {
         return !is_null($this->fields['ContentMd5']['FieldValue']);
     }
-
 }

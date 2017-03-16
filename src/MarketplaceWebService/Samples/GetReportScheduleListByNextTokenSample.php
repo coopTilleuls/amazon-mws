@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -17,10 +20,9 @@
  */
 
 /**
- * Get Report Schedule List By Next Token  Sample
+ * Get Report Schedule List By Next Token  Sample.
  */
-
-include_once('.config.inc.php');
+include_once '.config.inc.php';
 
 /************************************************************************
  * Uncomment to configure the client instance. Configuration settings
@@ -51,7 +53,7 @@ include_once('.config.inc.php');
 // India
 //$serviceUrl = "https://mws.amazonservices.in";
 
-$config = array (
+$config = array(
     'ServiceURL' => $serviceUrl,
     'ProxyHost' => null,
     'ProxyPort' => -1,
@@ -104,75 +106,67 @@ $service = new MarketplaceWebService_Client(
 //
 //invokeGetReportScheduleListByNextToken($service, $request);
 
-
 /**
  * Get Report Schedule List By Next Token Action Sample
- * retrieve the next batch of list items and if there are more items to retrieve
+ * retrieve the next batch of list items and if there are more items to retrieve.
  *
  * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
- * @param mixed $request MarketplaceWebService_Model_GetReportScheduleListByNextToken or array of parameters
+ * @param mixed                           $request MarketplaceWebService_Model_GetReportScheduleListByNextToken or array of parameters
  */
 function invokeGetReportScheduleListByNextToken(MarketplaceWebService_Interface $service, $request)
 {
     try {
         $response = $service->getReportScheduleListByNextToken($request);
 
-        echo ("Service Response\n");
-        echo ("=============================================================================\n");
+        echo "Service Response\n";
+        echo "=============================================================================\n";
 
-        echo("        GetReportScheduleListByNextTokenResponse\n");
+        echo "        GetReportScheduleListByNextTokenResponse\n";
         if ($response->isSetGetReportScheduleListByNextTokenResult()) {
-            echo("            GetReportScheduleListByNextTokenResult\n");
+            echo "            GetReportScheduleListByNextTokenResult\n";
             $getReportScheduleListByNextTokenResult = $response->getGetReportScheduleListByNextTokenResult();
-            if ($getReportScheduleListByNextTokenResult->isSetNextToken())
-            {
-                echo("                NextToken\n");
-                echo("                    " . $getReportScheduleListByNextTokenResult->getNextToken() . "\n");
+            if ($getReportScheduleListByNextTokenResult->isSetNextToken()) {
+                echo "                NextToken\n";
+                echo '                    '.$getReportScheduleListByNextTokenResult->getNextToken()."\n";
             }
-            if ($getReportScheduleListByNextTokenResult->isSetHasNext())
-            {
-                echo("                HasNext\n");
-                echo("                    " . $getReportScheduleListByNextTokenResult->getHasNext() . "\n");
+            if ($getReportScheduleListByNextTokenResult->isSetHasNext()) {
+                echo "                HasNext\n";
+                echo '                    '.$getReportScheduleListByNextTokenResult->getHasNext()."\n";
             }
             $reportScheduleList = $getReportScheduleListByNextTokenResult->getReportSchedule();
             foreach ($reportScheduleList as $reportSchedule) {
-                echo("                ReportSchedule\n");
-                if ($reportSchedule->isSetReportType())
-                {
-                    echo("                    ReportType\n");
-                    echo("                        " . $reportSchedule->getReportType() . "\n");
+                echo "                ReportSchedule\n";
+                if ($reportSchedule->isSetReportType()) {
+                    echo "                    ReportType\n";
+                    echo '                        '.$reportSchedule->getReportType()."\n";
                 }
-                if ($reportSchedule->isSetSchedule())
-                {
-                    echo("                    Schedule\n");
-                    echo("                        " . $reportSchedule->getSchedule()->format(DATE_FORMAT) . "\n");
+                if ($reportSchedule->isSetSchedule()) {
+                    echo "                    Schedule\n";
+                    echo '                        '.$reportSchedule->getSchedule()->format(DATE_FORMAT)."\n";
                 }
-                if ($reportSchedule->isSetScheduledDate())
-                {
-                    echo("                    ScheduledDate\n");
-                    echo("                        " . $reportSchedule->getScheduledDate() . "\n");
+                if ($reportSchedule->isSetScheduledDate()) {
+                    echo "                    ScheduledDate\n";
+                    echo '                        '.$reportSchedule->getScheduledDate()."\n";
                 }
             }
         }
         if ($response->isSetResponseMetadata()) {
-            echo("            ResponseMetadata\n");
+            echo "            ResponseMetadata\n";
             $responseMetadata = $response->getResponseMetadata();
-            if ($responseMetadata->isSetRequestId())
-            {
-                echo("                RequestId\n");
-                echo("                    " . $responseMetadata->getRequestId() . "\n");
+            if ($responseMetadata->isSetRequestId()) {
+                echo "                RequestId\n";
+                echo '                    '.$responseMetadata->getRequestId()."\n";
             }
         }
 
-        echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
+        echo '            ResponseHeaderMetadata: '.$response->getResponseHeaderMetadata()."\n";
     } catch (MarketplaceWebService_Exception $ex) {
-        echo("Caught Exception: " . $ex->getMessage() . "\n");
-        echo("Response Status Code: " . $ex->getStatusCode() . "\n");
-        echo("Error Code: " . $ex->getErrorCode() . "\n");
-        echo("Error Type: " . $ex->getErrorType() . "\n");
-        echo("Request ID: " . $ex->getRequestId() . "\n");
-        echo("XML: " . $ex->getXML() . "\n");
-        echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
+        echo 'Caught Exception: '.$ex->getMessage()."\n";
+        echo 'Response Status Code: '.$ex->getStatusCode()."\n";
+        echo 'Error Code: '.$ex->getErrorCode()."\n";
+        echo 'Error Type: '.$ex->getErrorType()."\n";
+        echo 'Request ID: '.$ex->getRequestId()."\n";
+        echo 'XML: '.$ex->getXML()."\n";
+        echo 'ResponseHeaderMetadata: '.$ex->getResponseHeaderMetadata()."\n";
     }
 }
-?>

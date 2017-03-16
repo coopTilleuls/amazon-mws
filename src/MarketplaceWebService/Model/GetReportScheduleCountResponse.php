@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleCountResponse
+ * MarketplaceWebService_Model_GetReportScheduleCountResponse.
  *
  * Properties:
  * <ul>
@@ -36,10 +37,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetReportScheduleCountResponse extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleCountResponse
+     * Construct new MarketplaceWebService_Model_GetReportScheduleCountResponse.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -53,18 +52,18 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'GetReportScheduleCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportScheduleCountResult'),
             'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
-
     /**
-     * Construct MarketplaceWebService_Model_GetReportScheduleCountResponse from XML string
+     * Construct MarketplaceWebService_Model_GetReportScheduleCountResponse from XML string.
      *
      * @param string $xml XML string to construct from
+     *
      * @return MarketplaceWebService_Model_GetReportScheduleCountResponse
      */
     public static function fromXML($xml)
@@ -75,12 +74,11 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
         $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportScheduleCountResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetReportScheduleCountResponse(($response->item(0)));
+            return new self(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportScheduleCountResponse from provided XML. 
-                                  Make sure that GetReportScheduleCountResponse is a root element");
+            throw new Exception('Unable to construct MarketplaceWebService_Model_GetReportScheduleCountResponse from provided XML. 
+                                  Make sure that GetReportScheduleCountResponse is a root element');
         }
-
     }
 
     /**
@@ -97,36 +95,36 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
      * Sets the value of the GetReportScheduleCountResult.
      *
      * @param GetReportScheduleCountResult GetReportScheduleCountResult
-     * @return void
      */
     public function setGetReportScheduleCountResult($value)
     {
         $this->fields['GetReportScheduleCountResult']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the GetReportScheduleCountResult  and returns this instance
+     * Sets the value of the GetReportScheduleCountResult  and returns this instance.
      *
      * @param GetReportScheduleCountResult $value GetReportScheduleCountResult
+     *
      * @return MarketplaceWebService_Model_GetReportScheduleCountResponse instance
      */
     public function withGetReportScheduleCountResult($value)
     {
         $this->setGetReportScheduleCountResult($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if GetReportScheduleCountResult  is set
+     * Checks if GetReportScheduleCountResult  is set.
      *
      * @return bool true if GetReportScheduleCountResult property is set
      */
     public function isSetGetReportScheduleCountResult()
     {
         return !is_null($this->fields['GetReportScheduleCountResult']['FieldValue']);
-
     }
 
     /**
@@ -143,61 +141,62 @@ class MarketplaceWebService_Model_GetReportScheduleCountResponse extends Marketp
      * Sets the value of the ResponseMetadata.
      *
      * @param ResponseMetadata ResponseMetadata
-     * @return void
      */
     public function setResponseMetadata($value)
     {
         $this->fields['ResponseMetadata']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the ResponseMetadata  and returns this instance
+     * Sets the value of the ResponseMetadata  and returns this instance.
      *
      * @param ResponseMetadata $value ResponseMetadata
+     *
      * @return MarketplaceWebService_Model_GetReportScheduleCountResponse instance
      */
     public function withResponseMetadata($value)
     {
         $this->setResponseMetadata($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ResponseMetadata  is set
+     * Checks if ResponseMetadata  is set.
      *
      * @return bool true if ResponseMetadata property is set
      */
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
 
-
-
     /**
-     * XML Representation for this object
+     * XML Representation for this object.
      *
      * @return string XML for this object
      */
     public function toXML()
     {
-        $xml = "";
-        $xml .= "<GetReportScheduleCountResponse xmlns=\"http://mws.amazonaws.com/doc/2009-01-01/\">";
+        $xml = '';
+        $xml .= '<GetReportScheduleCountResponse xmlns="http://mws.amazonaws.com/doc/2009-01-01/">';
         $xml .= $this->_toXMLFragment();
-        $xml .= "</GetReportScheduleCountResponse>";
+        $xml .= '</GetReportScheduleCountResponse>';
+
         return $xml;
     }
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
+    public function getResponseHeaderMetadata()
+    {
         return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
         return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

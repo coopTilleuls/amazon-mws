@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_StatusList
+ * MarketplaceWebService_Model_StatusList.
  *
  * Properties:
  * <ul>
@@ -35,10 +36,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_StatusList
+     * Construct new MarketplaceWebService_Model_StatusList.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -51,7 +50,7 @@ class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'Status' => array('FieldValue' => array(), 'FieldType' => array('string')),
         );
         parent::__construct($data);
@@ -71,46 +70,44 @@ class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
      * Sets the value of the Status.
      *
      * @param string or an array of string Status
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setStatus($status)
     {
         if (!$this->isNumericArray($status)) {
-            $status =  array ($status);
+            $status = array($status);
         }
         $this->fields['Status']['FieldValue'] = $status;
+
         return $this;
     }
-
 
     /**
      * Sets single or multiple values of Status list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withStatus($status1, $status2)</code>
+     * <code>withStatus($status1, $status2)</code>.
      *
-     * @param string  $stringArgs one or more Status
-     * @return MarketplaceWebService_Model_StatusList  instance
+     * @param string $stringArgs one or more Status
+     *
+     * @return MarketplaceWebService_Model_StatusList instance
      */
     public function withStatus($stringArgs)
     {
         foreach (func_get_args() as $status) {
             $this->fields['Status']['FieldValue'][] = $status;
         }
+
         return $this;
     }
 
-
     /**
-     * Checks if Status list is non-empty
+     * Checks if Status list is non-empty.
      *
      * @return bool true if Status list is non-empty
      */
     public function isSetStatus()
     {
-        return count ($this->fields['Status']['FieldValue']) > 0;
+        return count($this->fields['Status']['FieldValue']) > 0;
     }
-
-
-
-
 }

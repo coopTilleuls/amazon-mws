@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -16,10 +19,9 @@
  */
 
 /**
- * Get Feed Submission Count  Sample
+ * Get Feed Submission Count  Sample.
  */
-
-include_once('.config.inc.php');
+include_once '.config.inc.php';
 
 /************************************************************************
  * Uncomment to configure the client instance. Configuration settings
@@ -50,7 +52,7 @@ include_once('.config.inc.php');
 // India
 //$serviceUrl = "https://mws.amazonservices.in";
 
-$config = array (
+$config = array(
     'ServiceURL' => $serviceUrl,
     'ProxyHost' => null,
     'ProxyPort' => -1,
@@ -104,47 +106,46 @@ invokeGetFeedSubmissionCount($service, $request);
 
 /**
  * Get Feed Submission Count Action Sample
- * returns the number of feeds matching all of the specified criteria
+ * returns the number of feeds matching all of the specified criteria.
  *
  * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
- * @param mixed $request MarketplaceWebService_Model_GetFeedSubmissionCount or array of parameters
+ * @param mixed                           $request MarketplaceWebService_Model_GetFeedSubmissionCount or array of parameters
  */
-function invokeGetFeedSubmissionCount(MarketplaceWebService_Interface $service, $request)  {
+function invokeGetFeedSubmissionCount(MarketplaceWebService_Interface $service, $request)
+{
     try {
         $response = $service->getFeedSubmissionCount($request);
 
-        echo ("Service Response\n");
-        echo ("=============================================================================\n");
+        echo "Service Response\n";
+        echo "=============================================================================\n";
 
-        echo("        GetFeedSubmissionCountResponse\n");
+        echo "        GetFeedSubmissionCountResponse\n";
         if ($response->isSetGetFeedSubmissionCountResult()) {
-            echo("            GetFeedSubmissionCountResult\n");
+            echo "            GetFeedSubmissionCountResult\n";
             $getFeedSubmissionCountResult = $response->getGetFeedSubmissionCountResult();
-            if ($getFeedSubmissionCountResult->isSetCount())
-            {
-                echo("                Count\n");
-                echo("                    " . $getFeedSubmissionCountResult->getCount() . "\n");
+            if ($getFeedSubmissionCountResult->isSetCount()) {
+                echo "                Count\n";
+                echo '                    '.$getFeedSubmissionCountResult->getCount()."\n";
             }
         }
         if ($response->isSetResponseMetadata()) {
-            echo("            ResponseMetadata\n");
+            echo "            ResponseMetadata\n";
             $responseMetadata = $response->getResponseMetadata();
-            if ($responseMetadata->isSetRequestId())
-            {
-                echo("                RequestId\n");
-                echo("                    " . $responseMetadata->getRequestId() . "\n");
+            if ($responseMetadata->isSetRequestId()) {
+                echo "                RequestId\n";
+                echo '                    '.$responseMetadata->getRequestId()."\n";
             }
         }
 
-        echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
+        echo '            ResponseHeaderMetadata: '.$response->getResponseHeaderMetadata()."\n";
     } catch (MarketplaceWebService_Exception $ex) {
-        echo("Caught Exception: " . $ex->getMessage() . "\n");
-        echo("Response Status Code: " . $ex->getStatusCode() . "\n");
-        echo("Error Code: " . $ex->getErrorCode() . "\n");
-        echo("Error Type: " . $ex->getErrorType() . "\n");
-        echo("Request ID: " . $ex->getRequestId() . "\n");
-        echo("XML: " . $ex->getXML() . "\n");
-        echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
+        echo 'Caught Exception: '.$ex->getMessage()."\n";
+        echo 'Response Status Code: '.$ex->getStatusCode()."\n";
+        echo 'Error Code: '.$ex->getErrorCode()."\n";
+        echo 'Error Type: '.$ex->getErrorType()."\n";
+        echo 'Request ID: '.$ex->getRequestId()."\n";
+        echo 'XML: '.$ex->getXML()."\n";
+        echo 'ResponseHeaderMetadata: '.$ex->getResponseHeaderMetadata()."\n";
     }
 }
 ?>

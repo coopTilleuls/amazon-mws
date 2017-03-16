@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -17,10 +20,9 @@
  */
 
 /**
- * Update Report Acknowledgements  Sample
+ * Update Report Acknowledgements  Sample.
  */
-
-include_once('.config.inc.php');
+include_once '.config.inc.php';
 
 /************************************************************************
  * Uncomment to configure the client instance. Configuration settings
@@ -51,7 +53,7 @@ include_once('.config.inc.php');
 // India
 //$serviceUrl = "https://mws.amazonservices.in";
 
-$config = array (
+$config = array(
     'ServiceURL' => $serviceUrl,
     'ProxyHost' => null,
     'ProxyPort' => -1,
@@ -107,88 +109,78 @@ $service = new MarketplaceWebService_Client(
 //$idList = new MarketplaceWebService_Model_IdList();
 //$request->setReportIdList($idList->withId($reportId));
 //$request->setAcknowledged(false);
-//     
+//
 //invokeUpdateReportAcknowledgements($service, $request);
-
 
 /**
  * Update Report Acknowledgements Action Sample
  * The UpdateReportAcknowledgements operation updates the acknowledged status of one or more reports.
  *
  * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
- * @param mixed $request MarketplaceWebService_Model_UpdateReportAcknowledgements or array of parameters
+ * @param mixed                           $request MarketplaceWebService_Model_UpdateReportAcknowledgements or array of parameters
  */
 function invokeUpdateReportAcknowledgements(MarketplaceWebService_Interface $service, $request)
 {
     try {
         $response = $service->updateReportAcknowledgements($request);
 
-        echo ("Service Response\n");
-        echo ("=============================================================================\n");
+        echo "Service Response\n";
+        echo "=============================================================================\n";
 
-        echo("        UpdateReportAcknowledgementsResponse\n");
+        echo "        UpdateReportAcknowledgementsResponse\n";
         if ($response->isSetUpdateReportAcknowledgementsResult()) {
-            echo("            UpdateReportAcknowledgementsResult\n");
+            echo "            UpdateReportAcknowledgementsResult\n";
             $updateReportAcknowledgementsResult = $response->getUpdateReportAcknowledgementsResult();
-            if ($updateReportAcknowledgementsResult->isSetCount())
-            {
-                echo("                Count\n");
-                echo("                    " . $updateReportAcknowledgementsResult->getCount() . "\n");
+            if ($updateReportAcknowledgementsResult->isSetCount()) {
+                echo "                Count\n";
+                echo '                    '.$updateReportAcknowledgementsResult->getCount()."\n";
             }
             $reportInfoList = $updateReportAcknowledgementsResult->getReportInfo();
             foreach ($reportInfoList as $reportInfo) {
-                echo("                ReportInfo\n");
-                if ($reportInfo->isSetReportId())
-                {
-                    echo("                    ReportId\n");
-                    echo("                        " . $reportInfo->getReportId() . "\n");
+                echo "                ReportInfo\n";
+                if ($reportInfo->isSetReportId()) {
+                    echo "                    ReportId\n";
+                    echo '                        '.$reportInfo->getReportId()."\n";
                 }
-                if ($reportInfo->isSetReportType())
-                {
-                    echo("                    ReportType\n");
-                    echo("                        " . $reportInfo->getReportType() . "\n");
+                if ($reportInfo->isSetReportType()) {
+                    echo "                    ReportType\n";
+                    echo '                        '.$reportInfo->getReportType()."\n";
                 }
-                if ($reportInfo->isSetReportRequestId())
-                {
-                    echo("                    ReportRequestId\n");
-                    echo("                        " . $reportInfo->getReportRequestId() . "\n");
+                if ($reportInfo->isSetReportRequestId()) {
+                    echo "                    ReportRequestId\n";
+                    echo '                        '.$reportInfo->getReportRequestId()."\n";
                 }
-                if ($reportInfo->isSetAvailableDate())
-                {
-                    echo("                    AvailableDate\n");
-                    echo("                        " . $reportInfo->getAvailableDate()->format(DATE_FORMAT) . "\n");
+                if ($reportInfo->isSetAvailableDate()) {
+                    echo "                    AvailableDate\n";
+                    echo '                        '.$reportInfo->getAvailableDate()->format(DATE_FORMAT)."\n";
                 }
-                if ($reportInfo->isSetAcknowledged())
-                {
-                    echo("                    Acknowledged\n");
-                    echo("                        " . $reportInfo->getAcknowledged() . "\n");
+                if ($reportInfo->isSetAcknowledged()) {
+                    echo "                    Acknowledged\n";
+                    echo '                        '.$reportInfo->getAcknowledged()."\n";
                 }
-                if ($reportInfo->isSetAcknowledgedDate())
-                {
-                    echo("                    AcknowledgedDate\n");
-                    echo("                        " . $reportInfo->getAcknowledgedDate()->format(DATE_FORMAT) . "\n");
+                if ($reportInfo->isSetAcknowledgedDate()) {
+                    echo "                    AcknowledgedDate\n";
+                    echo '                        '.$reportInfo->getAcknowledgedDate()->format(DATE_FORMAT)."\n";
                 }
             }
         }
         if ($response->isSetResponseMetadata()) {
-            echo("            ResponseMetadata\n");
+            echo "            ResponseMetadata\n";
             $responseMetadata = $response->getResponseMetadata();
-            if ($responseMetadata->isSetRequestId())
-            {
-                echo("                RequestId\n");
-                echo("                    " . $responseMetadata->getRequestId() . "\n");
+            if ($responseMetadata->isSetRequestId()) {
+                echo "                RequestId\n";
+                echo '                    '.$responseMetadata->getRequestId()."\n";
             }
         }
 
-        echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
+        echo '            ResponseHeaderMetadata: '.$response->getResponseHeaderMetadata()."\n";
     } catch (MarketplaceWebService_Exception $ex) {
-        echo("Caught Exception: " . $ex->getMessage() . "\n");
-        echo("Response Status Code: " . $ex->getStatusCode() . "\n");
-        echo("Error Code: " . $ex->getErrorCode() . "\n");
-        echo("Error Type: " . $ex->getErrorType() . "\n");
-        echo("Request ID: " . $ex->getRequestId() . "\n");
-        echo("XML: " . $ex->getXML() . "\n");
-        echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
+        echo 'Caught Exception: '.$ex->getMessage()."\n";
+        echo 'Response Status Code: '.$ex->getStatusCode()."\n";
+        echo 'Error Code: '.$ex->getErrorCode()."\n";
+        echo 'Error Type: '.$ex->getErrorType()."\n";
+        echo 'Request ID: '.$ex->getRequestId()."\n";
+        echo 'XML: '.$ex->getXML()."\n";
+        echo 'ResponseHeaderMetadata: '.$ex->getResponseHeaderMetadata()."\n";
     }
 }
-                                                                    

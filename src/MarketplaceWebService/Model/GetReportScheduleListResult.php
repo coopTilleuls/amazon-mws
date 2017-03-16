@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleListResult
+ * MarketplaceWebService_Model_GetReportScheduleListResult.
  *
  * Properties:
  * <ul>
@@ -37,10 +38,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetReportScheduleListResult extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleListResult
+     * Construct new MarketplaceWebService_Model_GetReportScheduleListResult.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -55,7 +54,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
             'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
             'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportSchedule')),
@@ -77,29 +76,32 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the NextToken property.
      *
      * @param string NextToken
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setNextToken($value)
     {
         $this->fields['NextToken']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the NextToken and returns this instance
+     * Sets the value of the NextToken and returns this instance.
      *
      * @param string $value NextToken
+     *
      * @return MarketplaceWebService_Model_GetReportScheduleListResult instance
      */
     public function withNextToken($value)
     {
         $this->setNextToken($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if NextToken is set
+     * Checks if NextToken is set.
      *
      * @return bool true if NextToken  is set
      */
@@ -122,29 +124,32 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the HasNext property.
      *
      * @param bool HasNext
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setHasNext($value)
     {
         $this->fields['HasNext']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the HasNext and returns this instance
+     * Sets the value of the HasNext and returns this instance.
      *
      * @param bool $value HasNext
+     *
      * @return MarketplaceWebService_Model_GetReportScheduleListResult instance
      */
     public function withHasNext($value)
     {
         $this->setHasNext($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if HasNext is set
+     * Checks if HasNext is set.
      *
      * @return bool true if HasNext  is set
      */
@@ -167,47 +172,44 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the ReportSchedule.
      *
      * @param mixed ReportSchedule or an array of ReportSchedule ReportSchedule
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setReportScheduleList($reportSchedule)
     {
         if (!$this->_isNumericArray($reportSchedule)) {
-            $reportSchedule =  array ($reportSchedule);
+            $reportSchedule = array($reportSchedule);
         }
         $this->fields['ReportSchedule']['FieldValue'] = $reportSchedule;
+
         return $this;
     }
-
 
     /**
      * Sets single or multiple values of ReportSchedule list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withReportSchedule($reportSchedule1, $reportSchedule2)</code>
+     * <code>withReportSchedule($reportSchedule1, $reportSchedule2)</code>.
      *
-     * @param ReportSchedule  $reportScheduleArgs one or more ReportSchedule
-     * @return MarketplaceWebService_Model_GetReportScheduleListResult  instance
+     * @param ReportSchedule $reportScheduleArgs one or more ReportSchedule
+     *
+     * @return MarketplaceWebService_Model_GetReportScheduleListResult instance
      */
     public function withReportSchedule($reportScheduleArgs)
     {
         foreach (func_get_args() as $reportSchedule) {
             $this->fields['ReportSchedule']['FieldValue'][] = $reportSchedule;
         }
+
         return $this;
     }
 
-
-
     /**
-     * Checks if ReportSchedule list is non-empty
+     * Checks if ReportSchedule list is non-empty.
      *
      * @return bool true if ReportSchedule list is non-empty
      */
     public function isSetReportSchedule()
     {
-        return count ($this->fields['ReportSchedule']['FieldValue']) > 0;
+        return count($this->fields['ReportSchedule']['FieldValue']) > 0;
     }
-
-
-
-
 }

@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_RequestReportResult
+ * MarketplaceWebService_Model_RequestReportResult.
  *
  * Properties:
  * <ul>
@@ -35,10 +36,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_RequestReportResult
+     * Construct new MarketplaceWebService_Model_RequestReportResult.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -51,7 +50,7 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ReportRequestInfo'),
         );
         parent::__construct($data);
@@ -71,39 +70,35 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
      * Sets the value of the ReportRequestInfo.
      *
      * @param ReportRequestInfo ReportRequestInfo
-     * @return void
      */
     public function setReportRequestInfo($value)
     {
         $this->fields['ReportRequestInfo']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the ReportRequestInfo  and returns this instance
+     * Sets the value of the ReportRequestInfo  and returns this instance.
      *
      * @param ReportRequestInfo $value ReportRequestInfo
+     *
      * @return MarketplaceWebService_Model_RequestReportResult instance
      */
     public function withReportRequestInfo($value)
     {
         $this->setReportRequestInfo($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ReportRequestInfo  is set
+     * Checks if ReportRequestInfo  is set.
      *
      * @return bool true if ReportRequestInfo property is set
      */
     public function isSetReportRequestInfo()
     {
         return !is_null($this->fields['ReportRequestInfo']['FieldValue']);
-
     }
-
-
-
-
 }

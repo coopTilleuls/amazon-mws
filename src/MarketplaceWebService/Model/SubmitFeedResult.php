@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_SubmitFeedResult
+ * MarketplaceWebService_Model_SubmitFeedResult.
  *
  * Properties:
  * <ul>
@@ -35,10 +36,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_SubmitFeedResult extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedResult
+     * Construct new MarketplaceWebService_Model_SubmitFeedResult.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -51,7 +50,7 @@ class MarketplaceWebService_Model_SubmitFeedResult extends MarketplaceWebService
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_FeedSubmissionInfo'),
         );
         parent::__construct($data);
@@ -71,39 +70,35 @@ class MarketplaceWebService_Model_SubmitFeedResult extends MarketplaceWebService
      * Sets the value of the FeedSubmissionInfo.
      *
      * @param FeedSubmissionInfo FeedSubmissionInfo
-     * @return void
      */
     public function setFeedSubmissionInfo($value)
     {
         $this->fields['FeedSubmissionInfo']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the FeedSubmissionInfo  and returns this instance
+     * Sets the value of the FeedSubmissionInfo  and returns this instance.
      *
      * @param FeedSubmissionInfo $value FeedSubmissionInfo
+     *
      * @return MarketplaceWebService_Model_SubmitFeedResult instance
      */
     public function withFeedSubmissionInfo($value)
     {
         $this->setFeedSubmissionInfo($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if FeedSubmissionInfo  is set
+     * Checks if FeedSubmissionInfo  is set.
      *
      * @return bool true if FeedSubmissionInfo property is set
      */
     public function isSetFeedSubmissionInfo()
     {
         return !is_null($this->fields['FeedSubmissionInfo']['FieldValue']);
-
     }
-
-
-
-
 }

@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest
+ * MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest.
  *
  * Properties:
  * <ul>
@@ -37,10 +38,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest
+     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -55,7 +54,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
             'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -77,29 +76,32 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
      * Sets the value of the Marketplace property.
      *
      * @param string Marketplace
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Marketplace and returns this instance
+     * Sets the value of the Marketplace and returns this instance.
      *
      * @param string $value Marketplace
+     *
      * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest instance
      */
     public function withMarketplace($value)
     {
         $this->setMarketplace($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Marketplace is set
+     * Checks if Marketplace is set.
      *
      * @return bool true if Marketplace  is set
      */
@@ -122,29 +124,32 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
      * Sets the value of the Merchant property.
      *
      * @param string Merchant
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMerchant($value)
     {
         $this->fields['Merchant']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
+     * Sets the value of the Merchant and returns this instance.
      *
      * @param string $value Merchant
+     *
      * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest instance
      */
     public function withMerchant($value)
     {
         $this->setMerchant($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Merchant is set
+     * Checks if Merchant is set.
      *
      * @return bool true if Merchant  is set
      */
@@ -167,29 +172,32 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
      * Sets the value of the NextToken property.
      *
      * @param string NextToken
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setNextToken($value)
     {
         $this->fields['NextToken']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the NextToken and returns this instance
+     * Sets the value of the NextToken and returns this instance.
      *
      * @param string $value NextToken
+     *
      * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest instance
      */
     public function withNextToken($value)
     {
         $this->setNextToken($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if NextToken is set
+     * Checks if NextToken is set.
      *
      * @return bool true if NextToken  is set
      */
@@ -197,8 +205,4 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenRequest extend
     {
         return !is_null($this->fields['NextToken']['FieldValue']);
     }
-
-
-
-
 }

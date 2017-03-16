@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_ReportRequestInfo
+ * MarketplaceWebService_Model_ReportRequestInfo.
  *
  * Properties:
  * <ul>
@@ -40,10 +41,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_ReportRequestInfo
+     * Construct new MarketplaceWebService_Model_ReportRequestInfo.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -61,7 +60,7 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'ReportRequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
             'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
@@ -87,29 +86,32 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * Sets the value of the ReportRequestId property.
      *
      * @param string ReportRequestId
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setReportRequestId($value)
     {
         $this->fields['ReportRequestId']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the ReportRequestId and returns this instance
+     * Sets the value of the ReportRequestId and returns this instance.
      *
      * @param string $value ReportRequestId
+     *
      * @return MarketplaceWebService_Model_ReportRequestInfo instance
      */
     public function withReportRequestId($value)
     {
         $this->setReportRequestId($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ReportRequestId is set
+     * Checks if ReportRequestId is set.
      *
      * @return bool true if ReportRequestId  is set
      */
@@ -132,29 +134,32 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * Sets the value of the ReportType property.
      *
      * @param string ReportType
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setReportType($value)
     {
         $this->fields['ReportType']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the ReportType and returns this instance
+     * Sets the value of the ReportType and returns this instance.
      *
      * @param string $value ReportType
+     *
      * @return MarketplaceWebService_Model_ReportRequestInfo instance
      */
     public function withReportType($value)
     {
         $this->setReportType($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ReportType is set
+     * Checks if ReportType is set.
      *
      * @return bool true if ReportType  is set
      */
@@ -177,29 +182,32 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * Sets the value of the StartDate property.
      *
      * @param string StartDate
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setStartDate($value)
     {
         $this->fields['StartDate']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the StartDate and returns this instance
+     * Sets the value of the StartDate and returns this instance.
      *
      * @param string $value StartDate
+     *
      * @return MarketplaceWebService_Model_ReportRequestInfo instance
      */
     public function withStartDate($value)
     {
         $this->setStartDate($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if StartDate is set
+     * Checks if StartDate is set.
      *
      * @return bool true if StartDate  is set
      */
@@ -222,29 +230,32 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * Sets the value of the EndDate property.
      *
      * @param string EndDate
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setEndDate($value)
     {
         $this->fields['EndDate']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the EndDate and returns this instance
+     * Sets the value of the EndDate and returns this instance.
      *
      * @param string $value EndDate
+     *
      * @return MarketplaceWebService_Model_ReportRequestInfo instance
      */
     public function withEndDate($value)
     {
         $this->setEndDate($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if EndDate is set
+     * Checks if EndDate is set.
      *
      * @return bool true if EndDate  is set
      */
@@ -267,29 +278,32 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * Sets the value of the Scheduled property.
      *
      * @param string Scheduled
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setScheduled($value)
     {
         $this->fields['Scheduled']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Scheduled and returns this instance
+     * Sets the value of the Scheduled and returns this instance.
      *
      * @param string $value Scheduled
+     *
      * @return MarketplaceWebService_Model_ReportRequestInfo instance
      */
     public function withScheduled($value)
     {
         $this->setScheduled($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Scheduled is set
+     * Checks if Scheduled is set.
      *
      * @return bool true if Scheduled  is set
      */
@@ -297,7 +311,6 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
     {
         return !is_null($this->fields['Scheduled']['FieldValue']);
     }
-
 
     /**
      * Gets the value of the SubmittedDate property.
@@ -313,29 +326,32 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * Sets the value of the SubmittedDate property.
      *
      * @param string SubmittedDate
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setSubmittedDate($value)
     {
         $this->fields['SubmittedDate']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the SubmittedDate and returns this instance
+     * Sets the value of the SubmittedDate and returns this instance.
      *
      * @param string $value SubmittedDate
+     *
      * @return MarketplaceWebService_Model_ReportRequestInfo instance
      */
     public function withSubmittedDate($value)
     {
         $this->setSubmittedDate($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if SubmittedDate is set
+     * Checks if SubmittedDate is set.
      *
      * @return bool true if SubmittedDate  is set
      */
@@ -358,29 +374,32 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * Sets the value of the ReportProcessingStatus property.
      *
      * @param string ReportProcessingStatus
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setReportProcessingStatus($value)
     {
         $this->fields['ReportProcessingStatus']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the ReportProcessingStatus and returns this instance
+     * Sets the value of the ReportProcessingStatus and returns this instance.
      *
      * @param string $value ReportProcessingStatus
+     *
      * @return MarketplaceWebService_Model_ReportRequestInfo instance
      */
     public function withReportProcessingStatus($value)
     {
         $this->setReportProcessingStatus($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ReportProcessingStatus is set
+     * Checks if ReportProcessingStatus is set.
      *
      * @return bool true if ReportProcessingStatus  is set
      */
@@ -388,8 +407,4 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
     {
         return !is_null($this->fields['ReportProcessingStatus']['FieldValue']);
     }
-
-
-
-
 }

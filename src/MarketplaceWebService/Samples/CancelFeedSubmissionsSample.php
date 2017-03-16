@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -16,10 +19,9 @@
  */
 
 /**
- * Cancel Feed Submissions  Sample
+ * Cancel Feed Submissions  Sample.
  */
-
-include_once('.config.inc.php');
+include_once '.config.inc.php';
 
 /************************************************************************
  * Uncomment to configure the client instance. Configuration settings
@@ -50,7 +52,7 @@ include_once('.config.inc.php');
 // India
 //$serviceUrl = "https://mws.amazonservices.in";
 
-$config = array (
+$config = array(
     'ServiceURL' => $serviceUrl,
     'ProxyHost' => null,
     'ProxyPort' => -1,
@@ -104,88 +106,80 @@ $service = new MarketplaceWebService_Client(
 //
 //$idList = new MarketplaceWebService_Model_IdList();
 //$request->setFeedSubmissionIdList($idList->withId('<Feed Submission Id>'));
-// 
+//
 invokeCancelFeedSubmissions($service, $request);
 
 /**
  * Cancel Feed Submissions Action Sample
  * cancels feed submissions - by default all of the submissions of the
- * last 30 days that have not started processing
+ * last 30 days that have not started processing.
  *
  * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
- * @param mixed $request MarketplaceWebService_Model_CancelFeedSubmissions or array of parameters
+ * @param mixed                           $request MarketplaceWebService_Model_CancelFeedSubmissions or array of parameters
  */
 function invokeCancelFeedSubmissions(MarketplaceWebService_Interface $service, $request)
 {
     try {
         $response = $service->cancelFeedSubmissions($request);
 
-        echo ("Service Response\n");
-        echo ("=============================================================================\n");
+        echo "Service Response\n";
+        echo "=============================================================================\n";
 
-        echo("        CancelFeedSubmissionsResponse\n");
+        echo "        CancelFeedSubmissionsResponse\n";
         if ($response->isSetCancelFeedSubmissionsResult()) {
-            echo("            CancelFeedSubmissionsResult\n");
+            echo "            CancelFeedSubmissionsResult\n";
             $cancelFeedSubmissionsResult = $response->getCancelFeedSubmissionsResult();
-            if ($cancelFeedSubmissionsResult->isSetCount())
-            {
-                echo("                Count\n");
-                echo("                    " . $cancelFeedSubmissionsResult->getCount() . "\n");
+            if ($cancelFeedSubmissionsResult->isSetCount()) {
+                echo "                Count\n";
+                echo '                    '.$cancelFeedSubmissionsResult->getCount()."\n";
             }
             $feedSubmissionInfoList = $cancelFeedSubmissionsResult->getFeedSubmissionInfoList();
             foreach ($feedSubmissionInfoList as $feedSubmissionInfo) {
-                echo("                FeedSubmissionInfo\n");
-                if ($feedSubmissionInfo->isSetFeedSubmissionId())
-                {
-                    echo("                    FeedSubmissionId\n");
-                    echo("                        " . $feedSubmissionInfo->getFeedSubmissionId() . "\n");
+                echo "                FeedSubmissionInfo\n";
+                if ($feedSubmissionInfo->isSetFeedSubmissionId()) {
+                    echo "                    FeedSubmissionId\n";
+                    echo '                        '.$feedSubmissionInfo->getFeedSubmissionId()."\n";
                 }
-                if ($feedSubmissionInfo->isSetFeedType())
-                {
-                    echo("                    FeedType\n");
-                    echo("                        " . $feedSubmissionInfo->getFeedType() . "\n");
+                if ($feedSubmissionInfo->isSetFeedType()) {
+                    echo "                    FeedType\n";
+                    echo '                        '.$feedSubmissionInfo->getFeedType()."\n";
                 }
-                if ($feedSubmissionInfo->isSetSubmittedDate())
-                {
-                    echo("                    SubmittedDate\n");
-                    echo("                        " . $feedSubmissionInfo->getSubmittedDate()->format(DATE_FORMAT) . "\n");
+                if ($feedSubmissionInfo->isSetSubmittedDate()) {
+                    echo "                    SubmittedDate\n";
+                    echo '                        '.$feedSubmissionInfo->getSubmittedDate()->format(DATE_FORMAT)."\n";
                 }
-                if ($feedSubmissionInfo->isSetFeedProcessingStatus())
-                {
-                    echo("                    FeedProcessingStatus\n");
-                    echo("                        " . $feedSubmissionInfo->getFeedProcessingStatus() . "\n");
+                if ($feedSubmissionInfo->isSetFeedProcessingStatus()) {
+                    echo "                    FeedProcessingStatus\n";
+                    echo '                        '.$feedSubmissionInfo->getFeedProcessingStatus()."\n";
                 }
-                if ($feedSubmissionInfo->isSetStartedProcessingDate())
-                {
-                    echo("                    StartedProcessingDate\n");
-                    echo("                        " . $feedSubmissionInfo->getStartedProcessingDate()->format(DATE_FORMAT) . "\n");
+                if ($feedSubmissionInfo->isSetStartedProcessingDate()) {
+                    echo "                    StartedProcessingDate\n";
+                    echo '                        '.$feedSubmissionInfo->getStartedProcessingDate()->format(DATE_FORMAT)."\n";
                 }
-                if ($feedSubmissionInfo->isSetCompletedProcessingDate())
-                {
-                    echo("                    CompletedProcessingDate\n");
-                    echo("                        " . $feedSubmissionInfo->getCompletedProcessingDate()->format(DATE_FORMAT) . "\n");
+                if ($feedSubmissionInfo->isSetCompletedProcessingDate()) {
+                    echo "                    CompletedProcessingDate\n";
+                    echo '                        '.$feedSubmissionInfo->getCompletedProcessingDate()->format(DATE_FORMAT)."\n";
                 }
             }
         }
         if ($response->isSetResponseMetadata()) {
-            echo("            ResponseMetadata\n");
+            echo "            ResponseMetadata\n";
             $responseMetadata = $response->getResponseMetadata();
-            if ($responseMetadata->isSetRequestId())
-            {
-                echo("                RequestId\n");
-                echo("                    " . $responseMetadata->getRequestId() . "\n");
+            if ($responseMetadata->isSetRequestId()) {
+                echo "                RequestId\n";
+                echo '                    '.$responseMetadata->getRequestId()."\n";
             }
         }
 
-        echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
+        echo '            ResponseHeaderMetadata: '.$response->getResponseHeaderMetadata()."\n";
     } catch (MarketplaceWebService_Exception $ex) {
-        echo("Caught Exception: " . $ex->getMessage() . "\n");
-        echo("Response Status Code: " . $ex->getStatusCode() . "\n");
-        echo("Error Code: " . $ex->getErrorCode() . "\n");
-        echo("Error Type: " . $ex->getErrorType() . "\n");
-        echo("Request ID: " . $ex->getRequestId() . "\n");
-        echo("XML: " . $ex->getXML() . "\n");
-        echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
+        echo 'Caught Exception: '.$ex->getMessage()."\n";
+        echo 'Response Status Code: '.$ex->getStatusCode()."\n";
+        echo 'Error Code: '.$ex->getErrorCode()."\n";
+        echo 'Error Type: '.$ex->getErrorType()."\n";
+        echo 'Request ID: '.$ex->getRequestId()."\n";
+        echo 'XML: '.$ex->getXML()."\n";
+        echo 'ResponseHeaderMetadata: '.$ex->getResponseHeaderMetadata()."\n";
     }
 }
 ?>

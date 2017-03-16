@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetReportCountRequest
+ * MarketplaceWebService_Model_GetReportCountRequest.
  *
  * Properties:
  * <ul>
@@ -40,10 +41,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetReportCountRequest
+     * Construct new MarketplaceWebService_Model_GetReportCountRequest.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -61,7 +60,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
@@ -86,29 +85,32 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Marketplace property.
      *
      * @param string Marketplace
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Marketplace and returns this instance
+     * Sets the value of the Marketplace and returns this instance.
      *
      * @param string $value Marketplace
+     *
      * @return MarketplaceWebService_Model_GetReportCountRequest instance
      */
     public function withMarketplace($value)
     {
         $this->setMarketplace($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Marketplace is set
+     * Checks if Marketplace is set.
      *
      * @return bool true if Marketplace  is set
      */
@@ -131,29 +133,32 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Merchant property.
      *
      * @param string Merchant
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMerchant($value)
     {
         $this->fields['Merchant']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
+     * Sets the value of the Merchant and returns this instance.
      *
      * @param string $value Merchant
+     *
      * @return MarketplaceWebService_Model_GetReportCountRequest instance
      */
     public function withMerchant($value)
     {
         $this->setMerchant($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Merchant is set
+     * Checks if Merchant is set.
      *
      * @return bool true if Merchant  is set
      */
@@ -176,36 +181,36 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the ReportTypeList.
      *
      * @param TypeList ReportTypeList
-     * @return void
      */
     public function setReportTypeList($value)
     {
         $this->fields['ReportTypeList']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the ReportTypeList  and returns this instance
+     * Sets the value of the ReportTypeList  and returns this instance.
      *
      * @param TypeList $value ReportTypeList
+     *
      * @return MarketplaceWebService_Model_GetReportCountRequest instance
      */
     public function withReportTypeList($value)
     {
         $this->setReportTypeList($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ReportTypeList  is set
+     * Checks if ReportTypeList  is set.
      *
      * @return bool true if ReportTypeList property is set
      */
     public function isSetReportTypeList()
     {
         return !is_null($this->fields['ReportTypeList']['FieldValue']);
-
     }
 
     /**
@@ -222,29 +227,32 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Acknowledged property.
      *
      * @param bool Acknowledged
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setAcknowledged($value)
     {
         $this->fields['Acknowledged']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Acknowledged and returns this instance
+     * Sets the value of the Acknowledged and returns this instance.
      *
      * @param bool $value Acknowledged
+     *
      * @return MarketplaceWebService_Model_GetReportCountRequest instance
      */
     public function withAcknowledged($value)
     {
         $this->setAcknowledged($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Acknowledged is set
+     * Checks if Acknowledged is set.
      *
      * @return bool true if Acknowledged  is set
      */
@@ -267,29 +275,32 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the AvailableFromDate property.
      *
      * @param string AvailableFromDate
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setAvailableFromDate($value)
     {
         $this->fields['AvailableFromDate']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the AvailableFromDate and returns this instance
+     * Sets the value of the AvailableFromDate and returns this instance.
      *
      * @param string $value AvailableFromDate
+     *
      * @return MarketplaceWebService_Model_GetReportCountRequest instance
      */
     public function withAvailableFromDate($value)
     {
         $this->setAvailableFromDate($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if AvailableFromDate is set
+     * Checks if AvailableFromDate is set.
      *
      * @return bool true if AvailableFromDate  is set
      */
@@ -312,29 +323,32 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the AvailableToDate property.
      *
      * @param string AvailableToDate
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setAvailableToDate($value)
     {
         $this->fields['AvailableToDate']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the AvailableToDate and returns this instance
+     * Sets the value of the AvailableToDate and returns this instance.
      *
      * @param string $value AvailableToDate
+     *
      * @return MarketplaceWebService_Model_GetReportCountRequest instance
      */
     public function withAvailableToDate($value)
     {
         $this->setAvailableToDate($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if AvailableToDate is set
+     * Checks if AvailableToDate is set.
      *
      * @return bool true if AvailableToDate  is set
      */
@@ -342,8 +356,4 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
     {
         return !is_null($this->fields['AvailableToDate']['FieldValue']);
     }
-
-
-
-
 }

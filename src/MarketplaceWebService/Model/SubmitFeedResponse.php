@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_SubmitFeedResponse
+ * MarketplaceWebService_Model_SubmitFeedResponse.
  *
  * Properties:
  * <ul>
@@ -36,10 +37,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedResponse
+     * Construct new MarketplaceWebService_Model_SubmitFeedResponse.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -53,18 +52,18 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_SubmitFeedResult'),
             'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
-
     /**
-     * Construct MarketplaceWebService_Model_SubmitFeedResponse from XML string
+     * Construct MarketplaceWebService_Model_SubmitFeedResponse from XML string.
      *
      * @param string $xml XML string to construct from
+     *
      * @return MarketplaceWebService_Model_SubmitFeedResponse
      */
     public static function fromXML($xml)
@@ -75,12 +74,11 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
         $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:SubmitFeedResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_SubmitFeedResponse(($response->item(0)));
+            return new self(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_SubmitFeedResponse from provided XML.
-                                  Make sure that SubmitFeedResponse is a root element");
+            throw new Exception('Unable to construct MarketplaceWebService_Model_SubmitFeedResponse from provided XML.
+                                  Make sure that SubmitFeedResponse is a root element');
         }
-
     }
 
     /**
@@ -97,36 +95,36 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
      * Sets the value of the SubmitFeedResult.
      *
      * @param SubmitFeedResult SubmitFeedResult
-     * @return void
      */
     public function setSubmitFeedResult($value)
     {
         $this->fields['SubmitFeedResult']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the SubmitFeedResult  and returns this instance
+     * Sets the value of the SubmitFeedResult  and returns this instance.
      *
      * @param SubmitFeedResult $value SubmitFeedResult
+     *
      * @return MarketplaceWebService_Model_SubmitFeedResponse instance
      */
     public function withSubmitFeedResult($value)
     {
         $this->setSubmitFeedResult($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if SubmitFeedResult  is set
+     * Checks if SubmitFeedResult  is set.
      *
      * @return bool true if SubmitFeedResult property is set
      */
     public function isSetSubmitFeedResult()
     {
         return !is_null($this->fields['SubmitFeedResult']['FieldValue']);
-
     }
 
     /**
@@ -143,61 +141,62 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
      * Sets the value of the ResponseMetadata.
      *
      * @param ResponseMetadata ResponseMetadata
-     * @return void
      */
     public function setResponseMetadata($value)
     {
         $this->fields['ResponseMetadata']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the ResponseMetadata  and returns this instance
+     * Sets the value of the ResponseMetadata  and returns this instance.
      *
      * @param ResponseMetadata $value ResponseMetadata
+     *
      * @return MarketplaceWebService_Model_SubmitFeedResponse instance
      */
     public function withResponseMetadata($value)
     {
         $this->setResponseMetadata($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ResponseMetadata  is set
+     * Checks if ResponseMetadata  is set.
      *
      * @return bool true if ResponseMetadata property is set
      */
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
 
-
-
     /**
-     * XML Representation for this object
+     * XML Representation for this object.
      *
      * @return string XML for this object
      */
     public function toXML()
     {
-        $xml = "";
-        $xml .= "<SubmitFeedResponse xmlns=\"http://mws.amazonaws.com/doc/2009-01-01/\">";
+        $xml = '';
+        $xml .= '<SubmitFeedResponse xmlns="http://mws.amazonaws.com/doc/2009-01-01/">';
         $xml .= $this->toXMLFragment();
-        $xml .= "</SubmitFeedResponse>";
+        $xml .= '</SubmitFeedResponse>';
+
         return $xml;
     }
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
+    public function getResponseHeaderMetadata()
+    {
         return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
         return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_ManageReportScheduleRequest
+ * MarketplaceWebService_Model_ManageReportScheduleRequest.
  *
  * Properties:
  * <ul>
@@ -39,10 +40,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_ManageReportScheduleRequest extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_ManageReportScheduleRequest
+     * Construct new MarketplaceWebService_Model_ManageReportScheduleRequest.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -59,7 +58,7 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -83,29 +82,32 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the Marketplace property.
      *
      * @param string Marketplace
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Marketplace and returns this instance
+     * Sets the value of the Marketplace and returns this instance.
      *
      * @param string $value Marketplace
+     *
      * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
      */
     public function withMarketplace($value)
     {
         $this->setMarketplace($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Marketplace is set
+     * Checks if Marketplace is set.
      *
      * @return bool true if Marketplace  is set
      */
@@ -128,29 +130,32 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the Merchant property.
      *
      * @param string Merchant
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setMerchant($value)
     {
         $this->fields['Merchant']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
+     * Sets the value of the Merchant and returns this instance.
      *
      * @param string $value Merchant
+     *
      * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
      */
     public function withMerchant($value)
     {
         $this->setMerchant($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Merchant is set
+     * Checks if Merchant is set.
      *
      * @return bool true if Merchant  is set
      */
@@ -173,29 +178,32 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the ReportType property.
      *
      * @param string ReportType
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setReportType($value)
     {
         $this->fields['ReportType']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the ReportType and returns this instance
+     * Sets the value of the ReportType and returns this instance.
      *
      * @param string $value ReportType
+     *
      * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
      */
     public function withReportType($value)
     {
         $this->setReportType($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ReportType is set
+     * Checks if ReportType is set.
      *
      * @return bool true if ReportType  is set
      */
@@ -218,29 +226,32 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the Schedule property.
      *
      * @param string Schedule
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setSchedule($value)
     {
         $this->fields['Schedule']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Schedule and returns this instance
+     * Sets the value of the Schedule and returns this instance.
      *
      * @param string $value Schedule
+     *
      * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
      */
     public function withSchedule($value)
     {
         $this->setSchedule($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Schedule is set
+     * Checks if Schedule is set.
      *
      * @return bool true if Schedule  is set
      */
@@ -263,29 +274,32 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the ScheduleDate property.
      *
      * @param string ScheduleDate
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setScheduleDate($value)
     {
         $this->fields['ScheduleDate']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the ScheduleDate and returns this instance
+     * Sets the value of the ScheduleDate and returns this instance.
      *
      * @param string $value ScheduleDate
+     *
      * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
      */
     public function withScheduleDate($value)
     {
         $this->setScheduleDate($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ScheduleDate is set
+     * Checks if ScheduleDate is set.
      *
      * @return bool true if ScheduleDate  is set
      */
@@ -293,8 +307,4 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
     {
         return !is_null($this->fields['ScheduleDate']['FieldValue']);
     }
-
-
-
-
 }

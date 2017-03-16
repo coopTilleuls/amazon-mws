@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetReportRequestCountResponse
+ * MarketplaceWebService_Model_GetReportRequestCountResponse.
  *
  * Properties:
  * <ul>
@@ -36,10 +37,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetReportRequestCountResponse extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestCountResponse
+     * Construct new MarketplaceWebService_Model_GetReportRequestCountResponse.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -53,18 +52,18 @@ class MarketplaceWebService_Model_GetReportRequestCountResponse extends Marketpl
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'GetReportRequestCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportRequestCountResult'),
             'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
-
     /**
-     * Construct MarketplaceWebService_Model_GetReportRequestCountResponse from XML string
+     * Construct MarketplaceWebService_Model_GetReportRequestCountResponse from XML string.
      *
      * @param string $xml XML string to construct from
+     *
      * @return MarketplaceWebService_Model_GetReportRequestCountResponse
      */
     public static function fromXML($xml)
@@ -75,12 +74,11 @@ class MarketplaceWebService_Model_GetReportRequestCountResponse extends Marketpl
         $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportRequestCountResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetReportRequestCountResponse(($response->item(0)));
+            return new self(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportRequestCountResponse from provided XML. 
-                                  Make sure that GetReportRequestCountResponse is a root element");
+            throw new Exception('Unable to construct MarketplaceWebService_Model_GetReportRequestCountResponse from provided XML. 
+                                  Make sure that GetReportRequestCountResponse is a root element');
         }
-
     }
 
     /**
@@ -97,36 +95,36 @@ class MarketplaceWebService_Model_GetReportRequestCountResponse extends Marketpl
      * Sets the value of the GetReportRequestCountResult.
      *
      * @param GetReportRequestCountResult GetReportRequestCountResult
-     * @return void
      */
     public function setGetReportRequestCountResult($value)
     {
         $this->fields['GetReportRequestCountResult']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the GetReportRequestCountResult  and returns this instance
+     * Sets the value of the GetReportRequestCountResult  and returns this instance.
      *
      * @param GetReportRequestCountResult $value GetReportRequestCountResult
+     *
      * @return MarketplaceWebService_Model_GetReportRequestCountResponse instance
      */
     public function withGetReportRequestCountResult($value)
     {
         $this->setGetReportRequestCountResult($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if GetReportRequestCountResult  is set
+     * Checks if GetReportRequestCountResult  is set.
      *
      * @return bool true if GetReportRequestCountResult property is set
      */
     public function isSetGetReportRequestCountResult()
     {
         return !is_null($this->fields['GetReportRequestCountResult']['FieldValue']);
-
     }
 
     /**
@@ -143,61 +141,62 @@ class MarketplaceWebService_Model_GetReportRequestCountResponse extends Marketpl
      * Sets the value of the ResponseMetadata.
      *
      * @param ResponseMetadata ResponseMetadata
-     * @return void
      */
     public function setResponseMetadata($value)
     {
         $this->fields['ResponseMetadata']['FieldValue'] = $value;
+
         return;
     }
 
     /**
-     * Sets the value of the ResponseMetadata  and returns this instance
+     * Sets the value of the ResponseMetadata  and returns this instance.
      *
      * @param ResponseMetadata $value ResponseMetadata
+     *
      * @return MarketplaceWebService_Model_GetReportRequestCountResponse instance
      */
     public function withResponseMetadata($value)
     {
         $this->setResponseMetadata($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if ResponseMetadata  is set
+     * Checks if ResponseMetadata  is set.
      *
      * @return bool true if ResponseMetadata property is set
      */
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
 
-
-
     /**
-     * XML Representation for this object
+     * XML Representation for this object.
      *
      * @return string XML for this object
      */
     public function toXML()
     {
-        $xml = "";
-        $xml .= "<GetReportRequestCountResponse xmlns=\"http://mws.amazonaws.com/doc/2009-01-01/\">";
+        $xml = '';
+        $xml .= '<GetReportRequestCountResponse xmlns="http://mws.amazonaws.com/doc/2009-01-01/">';
         $xml .= $this->_toXMLFragment();
-        $xml .= "</GetReportRequestCountResponse>";
+        $xml .= '</GetReportRequestCountResponse>';
+
         return $xml;
     }
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
+    public function getResponseHeaderMetadata()
+    {
         return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
         return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

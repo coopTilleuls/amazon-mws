@@ -1,12 +1,15 @@
 <?php
 /**
- *  PHP Version 5
+ *  PHP Version 5.
  *
  *  @category    Amazon
- *  @package     MarketplaceWebService
+ *
  *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
+ *
+ *  @see        http://aws.amazon.com
+ *
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *
  *  @version     2009-01-01
  */
 /*******************************************************************************
@@ -19,12 +22,10 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');
-
-
+require_once 'MarketplaceWebService/Model.php';
 
 /**
- * MarketplaceWebService_Model_GetReportCountResult
+ * MarketplaceWebService_Model_GetReportCountResult.
  *
  * Properties:
  * <ul>
@@ -35,10 +36,8 @@ require_once ('MarketplaceWebService/Model.php');
  */
 class MarketplaceWebService_Model_GetReportCountResult extends MarketplaceWebService_Model
 {
-
-
     /**
-     * Construct new MarketplaceWebService_Model_GetReportCountResult
+     * Construct new MarketplaceWebService_Model_GetReportCountResult.
      *
      * @param mixed $data DOMElement or Associative Array to construct from.
      *
@@ -51,7 +50,7 @@ class MarketplaceWebService_Model_GetReportCountResult extends MarketplaceWebSer
      */
     public function __construct($data = null)
     {
-        $this->fields = array (
+        $this->fields = array(
             'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         );
         parent::__construct($data);
@@ -71,29 +70,32 @@ class MarketplaceWebService_Model_GetReportCountResult extends MarketplaceWebSer
      * Sets the value of the Count property.
      *
      * @param int Count
-     * @return this instance
+     *
+     * @return $this instance
      */
     public function setCount($value)
     {
         $this->fields['Count']['FieldValue'] = $value;
+
         return $this;
     }
 
     /**
-     * Sets the value of the Count and returns this instance
+     * Sets the value of the Count and returns this instance.
      *
      * @param int $value Count
+     *
      * @return MarketplaceWebService_Model_GetReportCountResult instance
      */
     public function withCount($value)
     {
         $this->setCount($value);
+
         return $this;
     }
 
-
     /**
-     * Checks if Count is set
+     * Checks if Count is set.
      *
      * @return bool true if Count  is set
      */
@@ -101,8 +103,4 @@ class MarketplaceWebService_Model_GetReportCountResult extends MarketplaceWebSer
     {
         return !is_null($this->fields['Count']['FieldValue']);
     }
-
-
-
-
 }
