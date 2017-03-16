@@ -279,9 +279,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReport
      *
-     * @return MarketplaceWebService_Model_GetReportResponse MarketplaceWebService_Model_GetReportResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportResponse MarketplaceWebService_Model_GetReportResponse
      */
     public function getReport($request)
     {
@@ -309,9 +309,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportScheduleCount
      *
-     * @return MarketplaceWebService_Model_GetReportScheduleCountResponse MarketplaceWebService_Model_GetReportScheduleCountResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportScheduleCountResponse MarketplaceWebService_Model_GetReportScheduleCountResponse
      */
     public function getReportScheduleCount($request)
     {
@@ -338,9 +338,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportRequestListByNextToken
      *
-     * @return MarketplaceWebService_Model_GetReportRequestListByNextTokenResponse MarketplaceWebService_Model_GetReportRequestListByNextTokenResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportRequestListByNextTokenResponse MarketplaceWebService_Model_GetReportRequestListByNextTokenResponse
      */
     public function getReportRequestListByNextToken($request)
     {
@@ -367,9 +367,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_UpdateReportAcknowledgements
      *
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsResponse MarketplaceWebService_Model_UpdateReportAcknowledgementsResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsResponse MarketplaceWebService_Model_UpdateReportAcknowledgementsResponse
      */
     public function updateReportAcknowledgements($request)
     {
@@ -400,9 +400,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_SubmitFeed
      *
-     * @return MarketplaceWebService_Model_SubmitFeedResponse MarketplaceWebService_Model_SubmitFeedResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_SubmitFeedResponse MarketplaceWebService_Model_SubmitFeedResponse
      */
     public function submitFeed($request)
     {
@@ -431,9 +431,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportCount
      *
-     * @return MarketplaceWebService_Model_GetReportCountResponse MarketplaceWebService_Model_GetReportCountResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportCountResponse MarketplaceWebService_Model_GetReportCountResponse
      */
     public function getReportCount($request)
     {
@@ -460,9 +460,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetFeedSubmissionListByNextToken
      *
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse
      */
     public function getFeedSubmissionListByNextToken($request)
     {
@@ -490,9 +490,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_CancelFeedSubmissions
      *
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsResponse MarketplaceWebService_Model_CancelFeedSubmissionsResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_CancelFeedSubmissionsResponse MarketplaceWebService_Model_CancelFeedSubmissionsResponse
      */
     public function cancelFeedSubmissions($request)
     {
@@ -519,9 +519,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_RequestReport
      *
-     * @return MarketplaceWebService_Model_RequestReportResponse MarketplaceWebService_Model_RequestReportResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_RequestReportResponse MarketplaceWebService_Model_RequestReportResponse
      */
     public function requestReport($request)
     {
@@ -548,9 +548,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetFeedSubmissionCount
      *
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse MarketplaceWebService_Model_GetFeedSubmissionCountResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse MarketplaceWebService_Model_GetFeedSubmissionCountResponse
      */
     public function getFeedSubmissionCount($request)
     {
@@ -578,9 +578,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_CancelReportRequests
      *
-     * @return MarketplaceWebService_Model_CancelReportRequestsResponse MarketplaceWebService_Model_CancelReportRequestsResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_CancelReportRequestsResponse MarketplaceWebService_Model_CancelReportRequestsResponse
      */
     public function cancelReportRequests($request)
     {
@@ -608,9 +608,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportList
      *
-     * @return MarketplaceWebService_Model_GetReportListResponse MarketplaceWebService_Model_GetReportListResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportListResponse MarketplaceWebService_Model_GetReportListResponse
      */
     public function getReportList($request)
     {
@@ -637,9 +637,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetFeedSubmissionResult
      *
-     * @return MarketplaceWebService_Model_GetFeedSubmissionResultResponse MarketplaceWebService_Model_GetFeedSubmissionResultResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetFeedSubmissionResultResponse MarketplaceWebService_Model_GetFeedSubmissionResultResponse
      */
     public function getFeedSubmissionResult($request)
     {
@@ -666,9 +666,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetFeedSubmissionList
      *
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListResponse MarketplaceWebService_Model_GetFeedSubmissionListResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetFeedSubmissionListResponse MarketplaceWebService_Model_GetFeedSubmissionListResponse
      */
     public function getFeedSubmissionList($request)
     {
@@ -695,9 +695,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportRequestList
      *
-     * @return MarketplaceWebService_Model_GetReportRequestListResponse MarketplaceWebService_Model_GetReportRequestListResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportRequestListResponse MarketplaceWebService_Model_GetReportRequestListResponse
      */
     public function getReportRequestList($request)
     {
@@ -724,9 +724,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportScheduleListByNextToken
      *
-     * @return MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse MarketplaceWebService_Model_GetReportScheduleListByNextTokenResponse
      */
     public function getReportScheduleListByNextToken($request)
     {
@@ -753,9 +753,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportListByNextToken
      *
-     * @return MarketplaceWebService_Model_GetReportListByNextTokenResponse MarketplaceWebService_Model_GetReportListByNextTokenResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportListByNextTokenResponse MarketplaceWebService_Model_GetReportListByNextTokenResponse
      */
     public function getReportListByNextToken($request)
     {
@@ -783,9 +783,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_ManageReportSchedule
      *
-     * @return MarketplaceWebService_Model_ManageReportScheduleResponse MarketplaceWebService_Model_ManageReportScheduleResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_ManageReportScheduleResponse MarketplaceWebService_Model_ManageReportScheduleResponse
      */
     public function manageReportSchedule($request)
     {
@@ -813,9 +813,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportRequestCount
      *
-     * @return MarketplaceWebService_Model_GetReportRequestCountResponse MarketplaceWebService_Model_GetReportRequestCountResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportRequestCountResponse MarketplaceWebService_Model_GetReportRequestCountResponse
      */
     public function getReportRequestCount($request)
     {
@@ -842,9 +842,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
      *
      * @see MarketplaceWebService_Model_GetReportScheduleList
      *
-     * @return MarketplaceWebService_Model_GetReportScheduleListResponse MarketplaceWebService_Model_GetReportScheduleListResponse
-     *
      * @throws MarketplaceWebService_Exception
+     *
+     * @return MarketplaceWebService_Model_GetReportScheduleListResponse MarketplaceWebService_Model_GetReportScheduleListResponse
      */
     public function getReportScheduleList($request)
     {
