@@ -54,8 +54,8 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
     public function __construct($data = null)
     {
         $this->fields = array (
-        'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_SubmitFeedResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+            'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_SubmitFeedResult'),
+            'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
         );
         parent::__construct($data);
     }
@@ -72,7 +72,7 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
         $dom = new DOMDocument();
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
-    	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
+        $xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:SubmitFeedResponse');
         if ($response->length == 1) {
             return new MarketplaceWebService_Model_SubmitFeedResponse(($response->item(0)));
@@ -194,10 +194,10 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
     private $_responseHeaderMetadata = null;
 
     public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+        return $this->_responseHeaderMetadata;
     }
 
     public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  PHP Version 5
  *
  *  @category    Amazon
@@ -9,44 +9,44 @@
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
  *  @version     2009-01-01
  */
-/******************************************************************************* 
+/*******************************************************************************
 
  *  Marketplace Web Service PHP5 Library
  *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
+ *
  */
 
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+require_once ('MarketplaceWebService/Model.php');
 
-    
+
 
 /**
  * MarketplaceWebService_Model_ReportSchedule
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>ReportType: string</li>
  * <li>Schedule: string</li>
  * <li>ScheduledDate: string</li>
  *
  * </ul>
- */ 
+ */
 class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_Model
 {
 
 
     /**
      * Construct new MarketplaceWebService_Model_ReportSchedule
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
+     *
+     * @param mixed $data DOMElement or Associative Array to construct from.
+     *
      * Valid properties:
      * <ul>
-     * 
+     *
      * <li>ReportType: string</li>
      * <li>Schedule: string</li>
      * <li>ScheduledDate: string</li>
@@ -56,30 +56,30 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Schedule' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ScheduledDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Schedule' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ScheduledDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the ReportType property.
-     * 
+     *
      * @return string ReportType
      */
-    public function getReportType() 
+    public function getReportType()
     {
         return $this->fields['ReportType']['FieldValue'];
     }
 
     /**
      * Sets the value of the ReportType property.
-     * 
+     *
      * @param string ReportType
      * @return this instance
      */
-    public function setReportType($value) 
+    public function setReportType($value)
     {
         $this->fields['ReportType']['FieldValue'] = $value;
         return $this;
@@ -87,7 +87,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Sets the value of the ReportType and returns this instance
-     * 
+     *
      * @param string $value ReportType
      * @return MarketplaceWebService_Model_ReportSchedule instance
      */
@@ -100,7 +100,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Checks if ReportType is set
-     * 
+     *
      * @return bool true if ReportType  is set
      */
     public function isSetReportType()
@@ -110,21 +110,21 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Gets the value of the Schedule property.
-     * 
+     *
      * @return string Schedule
      */
-    public function getSchedule() 
+    public function getSchedule()
     {
         return $this->fields['Schedule']['FieldValue'];
     }
 
     /**
      * Sets the value of the Schedule property.
-     * 
+     *
      * @param string Schedule
      * @return this instance
      */
-    public function setSchedule($value) 
+    public function setSchedule($value)
     {
         $this->fields['Schedule']['FieldValue'] = $value;
         return $this;
@@ -132,7 +132,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Sets the value of the Schedule and returns this instance
-     * 
+     *
      * @param string $value Schedule
      * @return MarketplaceWebService_Model_ReportSchedule instance
      */
@@ -145,7 +145,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Checks if Schedule is set
-     * 
+     *
      * @return bool true if Schedule  is set
      */
     public function isSetSchedule()
@@ -155,21 +155,21 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Gets the value of the ScheduledDate property.
-     * 
+     *
      * @return string ScheduledDate
      */
-    public function getScheduledDate() 
+    public function getScheduledDate()
     {
         return $this->fields['ScheduledDate']['FieldValue'];
     }
 
     /**
      * Sets the value of the ScheduledDate property.
-     * 
+     *
      * @param string ScheduledDate
      * @return this instance
      */
-    public function setScheduledDate($value) 
+    public function setScheduledDate($value)
     {
         $this->fields['ScheduledDate']['FieldValue'] = $value;
         return $this;
@@ -177,7 +177,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Sets the value of the ScheduledDate and returns this instance
-     * 
+     *
      * @param string $value ScheduledDate
      * @return MarketplaceWebService_Model_ReportSchedule instance
      */
@@ -190,7 +190,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
 
     /**
      * Checks if ScheduledDate is set
-     * 
+     *
      * @return bool true if ScheduledDate  is set
      */
     public function isSetScheduledDate()

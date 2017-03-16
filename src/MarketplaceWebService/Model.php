@@ -60,8 +60,8 @@ abstract class MarketplaceWebService_Model
      */
     public function __get($propertyName)
     {
-       $getter = "get$propertyName";
-       return $this->$getter();
+        $getter = "get$propertyName";
+        return $this->$getter();
     }
 
     /**
@@ -79,9 +79,9 @@ abstract class MarketplaceWebService_Model
      */
     public function __set($propertyName, $propertyValue)
     {
-       $setter = "set$propertyName";
-       $this->$setter($propertyValue);
-       return $this;
+        $setter = "set$propertyName";
+        $this->$setter($propertyValue);
+        return $this;
     }
 
 
@@ -137,7 +137,7 @@ abstract class MarketplaceWebService_Model
     {
         if(is_object($str))
             return;
-        
+
         $from = array( "&", "<", ">", "'", "\"");
         $to = array( "&amp;", "&lt;", "&gt;", "&#039;", "&quot;");
         return str_replace($from, $to, $str);
@@ -195,20 +195,20 @@ abstract class MarketplaceWebService_Model
                     $element = $xpath->query("./a:$fieldName/text()", $dom);
                     $data = null;
                     if ($element->length == 1) {
-                    	switch($this->fields[$fieldName]['FieldType']) {
-                    		case 'DateTime':
-                    			$data = new DateTime($element->item(0)->data,
-                    				new DateTimeZone('UTC'));
-                    			break;
-                    		case 'bool':
-                    			$value = $element->item(0)->data;
-                    			$data = $value === 'true' ? true : false;
-                    			break;
-                    		default:
-                    			$data = $element->item(0)->data;
-                    			break;
-                    	}
-                      $this->fields[$fieldName]['FieldValue'] = $data;
+                        switch($this->fields[$fieldName]['FieldType']) {
+                            case 'DateTime':
+                                $data = new DateTime($element->item(0)->data,
+                                    new DateTimeZone('UTC'));
+                                break;
+                            case 'bool':
+                                $value = $element->item(0)->data;
+                                $data = $value === 'true' ? true : false;
+                                break;
+                            default:
+                                $data = $element->item(0)->data;
+                                break;
+                        }
+                        $this->fields[$fieldName]['FieldValue'] = $data;
                     }
                 }
             }
@@ -245,7 +245,7 @@ abstract class MarketplaceWebService_Model
                         $elements = $array[$fieldName];
                         if (!$this->isNumericArray($elements)) {
                             $elements =  array($elements);
-                            }
+                        }
                         if (count ($elements) >= 1) {
                             foreach ($elements as $element) {
                                 $this->fields[$fieldName]['FieldValue'][] = $element;
@@ -280,32 +280,32 @@ abstract class MarketplaceWebService_Model
         return preg_match('/^MarketplaceWebService_Model_/', $fieldType);
     }
 
-   /**
-    * Checks  whether passed variable is an associative array
-    *
-    * @param mixed $var
-    * @return TRUE if passed variable is an associative array
-    */
+    /**
+     * Checks  whether passed variable is an associative array
+     *
+     * @param mixed $var
+     * @return TRUE if passed variable is an associative array
+     */
     private function isAssociativeArray($var) {
         return is_array($var) && array_keys($var) !== range(0, sizeof($var) - 1);
     }
 
-   /**
-    * Checks  whether passed variable is DOMElement
-    *
-    * @param mixed $var
-    * @return TRUE if passed variable is DOMElement
-    */
+    /**
+     * Checks  whether passed variable is DOMElement
+     *
+     * @param mixed $var
+     * @return TRUE if passed variable is DOMElement
+     */
     private function isDOMElement($var) {
         return $var instanceof DOMElement;
     }
 
-   /**
-    * Checks  whether passed variable is numeric array
-    *
-    * @param mixed $var
-    * @return TRUE if passed variable is an numeric array
-    */
+    /**
+     * Checks  whether passed variable is numeric array
+     *
+     * @param mixed $var
+     * @return TRUE if passed variable is an numeric array
+     */
     protected function isNumericArray($var) {
         return is_array($var) && array_keys($var) === range(0, sizeof($var) - 1);
     }

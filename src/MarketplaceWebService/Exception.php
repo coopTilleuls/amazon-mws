@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  PHP Version 5
  *
  *  @category    Amazon
@@ -9,16 +9,16 @@
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
  *  @version     2009-01-01
  */
-/******************************************************************************* 
+/*******************************************************************************
 
  *  Marketplace Web Service PHP5 Library
  *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
+ *
  */
 
 
 /**
- * Marketplace Web Service  Exception provides details of errors 
+ * Marketplace Web Service  Exception provides details of errors
  * returned by Marketplace Web Service  service
  *
  */
@@ -39,7 +39,7 @@ class MarketplaceWebService_Exception extends Exception
     private $xml = null;
 
     private $responseHeaderMetadata = null;
-   
+
 
     /**
      * Constructs MarketplaceWebService_Exception
@@ -54,7 +54,7 @@ class MarketplaceWebService_Exception extends Exception
      * <li>XML - (string) compete xml response at the time of exception</li>
      * <li>Exception - (Exception) inner exception if any</li>
      * </ul>
-     *         
+     *
      */
     public function __construct(array $errorInfo = array())
     {
@@ -69,7 +69,7 @@ class MarketplaceWebService_Exception extends Exception
                 $this->requestId = $exception->getRequestId();
                 $this->xml= $exception->getXML();
                 $this->responseHeaderMetadata = $exception->getResponseHeaderMetadata();
-            } 
+            }
         } else {
             if(isset($errorInfo["StatusCode"])) $this->statusCode = $errorInfo["StatusCode"];
             if(isset($errorInfo["ErrorCode"])) $this->errorCode = $errorInfo["ErrorCode"];
@@ -88,7 +88,7 @@ class MarketplaceWebService_Exception extends Exception
     public function getErrorCode(){
         return $this->errorCode;
     }
-   
+
     /**
      * Gets error type returned by the service.
      *
@@ -98,8 +98,8 @@ class MarketplaceWebService_Exception extends Exception
     public function getErrorType(){
         return $this->errorType;
     }
-    
-    
+
+
     /**
      * Gets error message
      *
@@ -108,7 +108,7 @@ class MarketplaceWebService_Exception extends Exception
     public function getErrorMessage() {
         return $this->message;
     }
-    
+
     /**
      * Gets status code returned by the service if available. If status
      * code is set to -1, it means that status code was unavailable at the
@@ -119,7 +119,7 @@ class MarketplaceWebService_Exception extends Exception
     public function getStatusCode() {
         return $this->statusCode;
     }
-    
+
     /**
      * Gets XML returned by the service if available.
      *
@@ -128,7 +128,7 @@ class MarketplaceWebService_Exception extends Exception
     public function getXML() {
         return $this->xml;
     }
-    
+
     /**
      * Gets Request ID returned by the service if available.
      *
