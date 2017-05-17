@@ -64,6 +64,8 @@ class MarketplaceWebService_Model_RequestReportResponse extends MarketplaceWebSe
      *
      * @param string $xml XML string to construct from
      *
+     * @throws Exception
+     *
      * @return MarketplaceWebService_Model_RequestReportResponse
      */
     public static function fromXML($xml)
@@ -84,7 +86,7 @@ class MarketplaceWebService_Model_RequestReportResponse extends MarketplaceWebSe
     /**
      * Gets the value of the RequestReportResult.
      *
-     * @return RequestReportResult RequestReportResult
+     * @return MarketplaceWebService_Model_RequestReportResult
      */
     public function getRequestReportResult()
     {
@@ -94,7 +96,7 @@ class MarketplaceWebService_Model_RequestReportResponse extends MarketplaceWebSe
     /**
      * Sets the value of the RequestReportResult.
      *
-     * @param RequestReportResult RequestReportResult
+     * @param MarketplaceWebService_Model_RequestReportResult $value
      */
     public function setRequestReportResult($value)
     {
@@ -106,9 +108,9 @@ class MarketplaceWebService_Model_RequestReportResponse extends MarketplaceWebSe
     /**
      * Sets the value of the RequestReportResult  and returns this instance.
      *
-     * @param RequestReportResult $value RequestReportResult
+     * @param MarketplaceWebService_Model_RequestReportResult $value
      *
-     * @return MarketplaceWebService_Model_RequestReportResponse instance
+     * @return MarketplaceWebService_Model_RequestReportResponse
      */
     public function withRequestReportResult($value)
     {
@@ -130,7 +132,7 @@ class MarketplaceWebService_Model_RequestReportResponse extends MarketplaceWebSe
     /**
      * Gets the value of the ResponseMetadata.
      *
-     * @return ResponseMetadata ResponseMetadata
+     * @return MarketplaceWebService_Model_ResponseMetadata
      */
     public function getResponseMetadata()
     {
@@ -140,7 +142,7 @@ class MarketplaceWebService_Model_RequestReportResponse extends MarketplaceWebSe
     /**
      * Sets the value of the ResponseMetadata.
      *
-     * @param ResponseMetadata ResponseMetadata
+     * @param MarketplaceWebService_Model_ResponseMetadata $value
      */
     public function setResponseMetadata($value)
     {
@@ -152,9 +154,9 @@ class MarketplaceWebService_Model_RequestReportResponse extends MarketplaceWebSe
     /**
      * Sets the value of the ResponseMetadata  and returns this instance.
      *
-     * @param ResponseMetadata $value ResponseMetadata
+     * @param MarketplaceWebService_Model_ResponseMetadata $value
      *
-     * @return MarketplaceWebService_Model_RequestReportResponse instance
+     * @return MarketplaceWebService_Model_RequestReportResponse
      */
     public function withResponseMetadata($value)
     {

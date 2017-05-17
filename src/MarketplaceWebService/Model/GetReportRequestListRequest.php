@@ -176,7 +176,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
     /**
      * Gets the value of the ReportRequestIdList.
      *
-     * @return IdList ReportRequestIdList
+     * @return MarketplaceWebService_Model_IdList
      */
     public function getReportRequestIdList()
     {
@@ -186,7 +186,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
     /**
      * Sets the value of the ReportRequestIdList.
      *
-     * @param IdList ReportRequestIdList
+     * @param MarketplaceWebService_Model_IdList $value
      */
     public function setReportRequestIdList($value)
     {
@@ -198,9 +198,9 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
     /**
      * Sets the value of the ReportRequestIdList  and returns this instance.
      *
-     * @param IdList $value ReportRequestIdList
+     * @param MarketplaceWebService_Model_IdList $value
      *
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return MarketplaceWebService_Model_GetReportRequestListRequest
      */
     public function withReportRequestIdList($value)
     {
@@ -222,7 +222,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
     /**
      * Gets the value of the ReportTypeList.
      *
-     * @return TypeList ReportTypeList
+     * @return MarketplaceWebService_Model_TypeList
      */
     public function getReportTypeList()
     {
@@ -232,7 +232,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
     /**
      * Sets the value of the ReportTypeList.
      *
-     * @param TypeList ReportTypeList
+     * @param MarketplaceWebService_Model_TypeList $value
      */
     public function setReportTypeList($value)
     {
@@ -244,9 +244,9 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
     /**
      * Sets the value of the ReportTypeList  and returns this instance.
      *
-     * @param TypeList $value ReportTypeList
+     * @param MarketplaceWebService_Model_TypeList $value
      *
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return MarketplaceWebService_Model_GetReportRequestListRequest
      */
     public function withReportTypeList($value)
     {

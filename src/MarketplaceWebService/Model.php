@@ -94,7 +94,7 @@ abstract class MarketplaceWebService_Model
      *
      * @return string XML fragment for this object
      */
-    protected function toXMLFragment()
+    protected function _toXMLFragment()
     {
         $xml = '';
         foreach ($this->fields as $fieldName => $field) {
@@ -105,7 +105,7 @@ abstract class MarketplaceWebService_Model
                     if ($this->isComplexType($fieldType[0])) {
                         foreach ($fieldValue as $item) {
                             $xml .= "<$fieldName>";
-                            $xml .= $item->toXMLFragment();
+                            $xml .= $item->_toXMLFragment();
                             $xml .= "</$fieldName>";
                         }
                     } else {
@@ -118,7 +118,7 @@ abstract class MarketplaceWebService_Model
                 } else {
                     if ($this->isComplexType($fieldType)) {
                         $xml .= "<$fieldName>";
-                        $xml .= $fieldValue->toXMLFragment();
+                        $xml .= $fieldValue->_toXMLFragment();
                         $xml .= "</$fieldName>";
                     } else {
                         $xml .= "<$fieldName>";

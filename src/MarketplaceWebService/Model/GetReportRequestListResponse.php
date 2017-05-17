@@ -64,6 +64,8 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
      *
      * @param string $xml XML string to construct from
      *
+     * @throws Exception
+     *
      * @return MarketplaceWebService_Model_GetReportRequestListResponse
      */
     public static function fromXML($xml)
@@ -84,7 +86,7 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Gets the value of the GetReportRequestListResult.
      *
-     * @return GetReportRequestListResult GetReportRequestListResult
+     * @return MarketplaceWebService_Model_GetReportRequestListResult
      */
     public function getGetReportRequestListResult()
     {
@@ -94,7 +96,7 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Sets the value of the GetReportRequestListResult.
      *
-     * @param GetReportRequestListResult GetReportRequestListResult
+     * @param MarketplaceWebService_Model_GetReportRequestListResult $value
      */
     public function setGetReportRequestListResult($value)
     {
@@ -106,9 +108,9 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Sets the value of the GetReportRequestListResult  and returns this instance.
      *
-     * @param GetReportRequestListResult $value GetReportRequestListResult
+     * @param MarketplaceWebService_Model_GetReportRequestListResult $value
      *
-     * @return MarketplaceWebService_Model_GetReportRequestListResponse instance
+     * @return MarketplaceWebService_Model_GetReportRequestListResponse
      */
     public function withGetReportRequestListResult($value)
     {
@@ -120,7 +122,7 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Checks if GetReportRequestListResult  is set.
      *
-     * @return bool true if GetReportRequestListResult property is set
+     * @return bool
      */
     public function isSetGetReportRequestListResult()
     {
@@ -130,7 +132,7 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Gets the value of the ResponseMetadata.
      *
-     * @return ResponseMetadata ResponseMetadata
+     * @return MarketplaceWebService_Model_ResponseMetadata
      */
     public function getResponseMetadata()
     {
@@ -140,7 +142,7 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Sets the value of the ResponseMetadata.
      *
-     * @param ResponseMetadata ResponseMetadata
+     * @param MarketplaceWebService_Model_ResponseMetadata $value
      */
     public function setResponseMetadata($value)
     {
@@ -152,9 +154,9 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Sets the value of the ResponseMetadata  and returns this instance.
      *
-     * @param ResponseMetadata $value ResponseMetadata
+     * @param MarketplaceWebService_Model_ResponseMetadata $value
      *
-     * @return MarketplaceWebService_Model_GetReportRequestListResponse instance
+     * @return MarketplaceWebService_Model_GetReportRequestListResponse
      */
     public function withResponseMetadata($value)
     {
@@ -166,7 +168,7 @@ class MarketplaceWebService_Model_GetReportRequestListResponse extends Marketpla
     /**
      * Checks if ResponseMetadata  is set.
      *
-     * @return bool true if ResponseMetadata property is set
+     * @return bool
      */
     public function isSetResponseMetadata()
     {

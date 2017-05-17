@@ -161,7 +161,7 @@ class MarketplaceWebService_Model_GetReportRequestListResult extends Marketplace
     /**
      * Gets the value of the ReportRequestInfo.
      *
-     * @return array of ReportRequestInfo ReportRequestInfo
+     * @return MarketplaceWebService_Model_ReportRequestInfo[]
      */
     public function getReportRequestInfoList()
     {

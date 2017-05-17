@@ -59,7 +59,7 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
     /**
      * Gets the value of the ReportRequestInfo.
      *
-     * @return ReportRequestInfo ReportRequestInfo
+     * @return MarketplaceWebService_Model_ReportRequestInfo
      */
     public function getReportRequestInfo()
     {
@@ -69,7 +69,7 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
     /**
      * Sets the value of the ReportRequestInfo.
      *
-     * @param ReportRequestInfo ReportRequestInfo
+     * @param MarketplaceWebService_Model_ReportRequestInfo $value
      */
     public function setReportRequestInfo($value)
     {
@@ -81,7 +81,7 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
     /**
      * Sets the value of the ReportRequestInfo  and returns this instance.
      *
-     * @param ReportRequestInfo $value ReportRequestInfo
+     * @param MarketplaceWebService_Model_ReportRequestInfo $value
      *
      * @return MarketplaceWebService_Model_RequestReportResult instance
      */

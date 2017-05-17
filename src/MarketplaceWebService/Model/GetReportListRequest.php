@@ -224,7 +224,7 @@ class MarketplaceWebService_Model_GetReportListRequest extends MarketplaceWebSer
     /**
      * Gets the value of the ReportTypeList.
      *
-     * @return TypeList ReportTypeList
+     * @return MarketplaceWebService_Model_TypeList
      */
     public function getReportTypeList()
     {
@@ -234,7 +234,7 @@ class MarketplaceWebService_Model_GetReportListRequest extends MarketplaceWebSer
     /**
      * Sets the value of the ReportTypeList.
      *
-     * @param TypeList ReportTypeList
+     * @param MarketplaceWebService_Model_TypeList $value
      */
     public function setReportTypeList($value)
     {
@@ -246,7 +246,7 @@ class MarketplaceWebService_Model_GetReportListRequest extends MarketplaceWebSer
     /**
      * Sets the value of the ReportTypeList  and returns this instance.
      *
-     * @param TypeList $value ReportTypeList
+     * @param MarketplaceWebService_Model_TypeList $value
      *
      * @return MarketplaceWebService_Model_GetReportListRequest instance
      */
@@ -424,7 +424,7 @@ class MarketplaceWebService_Model_GetReportListRequest extends MarketplaceWebSer
     /**
      * Sets the value of the ReportRequestIdList.
      *
-     * @param IdList ReportRequestIdList
+     * @param MarketplaceWebService_Model_IdList $value
      */
     public function setReportRequestIdList($value)
     {

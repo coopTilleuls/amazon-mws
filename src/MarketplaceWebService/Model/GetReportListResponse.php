@@ -84,7 +84,7 @@ class MarketplaceWebService_Model_GetReportListResponse extends MarketplaceWebSe
     /**
      * Gets the value of the GetReportListResult.
      *
-     * @return GetReportListResult GetReportListResult
+     * @return MarketplaceWebService_Model_GetReportListResult
      */
     public function getGetReportListResult()
     {
