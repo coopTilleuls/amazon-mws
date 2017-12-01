@@ -977,7 +977,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
     /**
      * Look for additional error strings in the response and return formatted exception.
      */
-    private function reportAnyErrors($responseBody, $status, Exception $e = null, $metadata)
+    private function reportAnyErrors($responseBody, $status, Exception $e = null, $responseHeaderMetadata)
     {
         $exProps = array();
         $exProps['StatusCode'] = $status;
