@@ -1543,6 +1543,10 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
             $parameters['PurgeAndReplace'] = $request->getPurgeAndReplace() ? 'true' : 'false';
         }
 
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
+
         $headers = array();
         array_push($headers, 'Content-Type: '.$request->getContentType()->toString());
 
@@ -1816,7 +1820,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         if ($request->isSetFeedSubmissionId()) {
             $parameters['FeedSubmissionId'] = $request->getFeedSubmissionId();
         }
-
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
 
