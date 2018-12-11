@@ -1,18 +1,15 @@
 {
-    "name": "magazord-plataforma/amazon-mws",
+    "name": "tilleuls/amazon-mws",
     "type": "library",
     "description": "Amazon Marketplace Web Service PHP Client Library",
-    "keywords": ["amazon", "mws", "marketplace", "magazord"],
+    "keywords": ["amazon", "mws", "client", "api", "library"],
+    "homepage": "http://les-tilleuls.coop",
     "licence": "Apache-2.0",
     "authors": [
         {
           "name": "Baptiste Meyer",
           "email": "baptiste@les-tilleuls.coop"
-        },
-        {
-            "name": "Desenvolvimento Magazord",
-            "email": "webmaster@magazord.com.br"
-        }        
+        }
     ],
     "require": {
         "php": ">=5.2.8",
