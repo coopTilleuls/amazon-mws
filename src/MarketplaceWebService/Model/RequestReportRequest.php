@@ -70,6 +70,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
             'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'EndDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'ReportOptions' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
@@ -408,5 +409,51 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
     public function isSetReportOptions()
     {
         return !is_null($this->fields['ReportOptions']['FieldValue']);
+    }
+
+    /**
+     * Get the value of the MWSAuthToken property.
+     *
+     * @return String MWSAuthToken.
+     */
+    public function getMWSAuthToken()
+    {
+        return $this->fields['MWSAuthToken']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the MWSAuthToken property.
+     *
+     * @param string mwsAuthToken
+     * @return this instance
+     */
+    public function setMWSAuthToken($value)
+    {
+        $this->fields['MWSAuthToken']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if MWSAuthToken is set.
+     *
+     * @return true if MWSAuthToken is set.
+     */
+    public function isSetMWSAuthToken()
+    {
+        return !is_null($this->fields['MWSAuthToken']['FieldValue']);
+    }
+
+    /**
+     * Set the value of MWSAuthToken, return this.
+     *
+     * @param mwsAuthToken
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withMWSAuthToken($value)
+    {
+        $this->setMWSAuthToken($value);
+        return $this;
     }
 }
